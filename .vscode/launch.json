@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "lpf-revup-2022",
+      "request": "launch",
+      "type": "node"
+    },
+    {
+      "name": "lpf-revup-2022 (profile mode)",
+      "request": "launch",
+      "type": "node",
+      "flutterMode": "profile"
+    }
+  ]
+}

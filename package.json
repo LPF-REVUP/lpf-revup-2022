@@ -1,0 +1,52 @@
+{
+  "name": "lpf-revup-2022",
+  "version": "1.0.0",
+  "description": "Rev Up 2022",
+  "author": "jiyuujin <jiyuujinunite@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run tailwind:w\" \"svelte-kit dev\"",
+    "build": "npm run tailwind:build && svelte-kit build",
+    "preview": "svelte-kit preview",
+    "tailwind:w": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/tailwind.css -o src/tailwind-output.css -w",
+    "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/tailwind.css -o src/tailwind-output.css",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:fix": "eslint . --ignore-path .gitignore --fix",
+    "format": "prettier . --write --plugin-search-dir=. --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@fontsource/fira-mono": "4.5.0",
+    "@line/liff": "2.19.1",
+    "@lukeed/uuid": "2.0.0",
+    "cookie": "0.4.1"
+  },
+  "devDependencies": {
+    "@poppanator/sveltekit-svg": "0.3.2",
+    "@sveltejs/adapter-netlify": "1.0.0-next.56",
+    "@sveltejs/kit": "1.0.0-next.323",
+    "@sveltejs/svelte-virtual-list": "3.0.1",
+    "@types/cookie": "0.5.1",
+    "@typescript-eslint/eslint-plugin": "5.21.0",
+    "@typescript-eslint/parser": "5.21.0",
+    "autoprefixer": "10.4.5",
+    "concurrently": "6.5.1",
+    "cross-env": "7.0.3",
+    "eslint": "8.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-svelte3": "3.4.1",
+    "eslint-plugin-tailwindcss": "3.5.0",
+    "postcss": "8.4.12",
+    "postcss-cli": "9.1.0",
+    "prettier": "2.6.2",
+    "prettier-plugin-svelte": "2.7.0",
+    "svelte": "3.47.0",
+    "svelte-check": "2.7.0",
+    "svelte-preprocess": "4.10.6",
+    "tailwindcss": "3.0.24",
+    "tslib": "2.4.0",
+    "typescript": "4.6.3"
+  },
+  "type": "module"
+}
