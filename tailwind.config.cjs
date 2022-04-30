@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         'line-green': '#4caf4f',
+        'line-main-black': '#111111',
         'line-black': '#272727',
       },
       backgroundImage: {

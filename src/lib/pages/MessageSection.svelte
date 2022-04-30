@@ -9,7 +9,7 @@
   } from '$lib/utils/constants'
 </script>
 
-<section class="w-full mx-auto px-0 bg-line-black p-3">
+<section class="w-full mx-auto px-0 bg-line-main-black p-3">
   <div class="mx-auto">
     <div class="mb-4">
       <div class="flex justify-center items-center">
