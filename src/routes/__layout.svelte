@@ -6,6 +6,8 @@
   import '../app.css'
 
   let liffObject
+  let profileName
+  let profileUrl
 
   async function initialize() {
     import('@line/liff').then((liff: any) => {
@@ -13,6 +15,15 @@
         .init({ liffId: variables.liffId })
         .then(() => {
           liffObject = liff
+          liff
+            .getProfile()
+            .then((profile: any) => {
+              profileName = profile.displayName
+              profileUrl = profile.pictureUrl
+            })
+            .catch((err: any) => {
+              console.error({ err })
+            })
         })
         .catch((err) => {
           console.error({ err })
@@ -33,6 +44,11 @@
   })
 </script>
 
-<NavSection on:signIn={handleSignIn} />
+<NavSection
+  signedStatus={liffObject?.isLoggedIn()}
+  {profileName}
+  {profileUrl}
+  on:signIn={handleSignIn}
+/>
 <slot />
 <FooterSection />

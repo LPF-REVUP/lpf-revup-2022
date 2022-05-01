@@ -4,6 +4,10 @@
   import GithubLogo from '$lib/assets/github_logo.svg'
   import LoginLogo from '$lib/assets/h__login--hover.svg'
 
+  export let signedStatus
+  export let profileName
+  export let profileUrl
+
   const dispatch = createEventDispatcher()
 
   const signIn = () => {
@@ -73,7 +77,15 @@
             class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-line-green md:p-0"
             on:click={signIn}
           >
-            <img alt="Login Logo" src={LoginLogo} class="w-32" />
+            {#if !signedStatus}
+              <img alt="Login Logo" src={LoginLogo} class="w-32" />
+            {:else}
+              <img
+                alt={`${profileName} Logo`}
+                src={profileUrl}
+                class="w-12 object-cover rounded-[50%]"
+              />
+            {/if}
           </button>
         </li>
       </ul>
