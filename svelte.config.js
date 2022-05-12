@@ -15,9 +15,8 @@ const config = {
       enabled: process.env.NODE_ENV !== 'development',
     },
 
-    paths: {
-      base: process.env.NODE_ENV === 'development' ? '' : '/2022',
-    },
+    paths: { assets: '', base: '' },
+    appDir: '2022',
 
     vite: {
       server: {
