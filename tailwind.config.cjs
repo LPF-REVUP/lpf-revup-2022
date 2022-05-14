@@ -5,8 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'line-deep-green': '#668c4a',
         'line-green': '#4caf4f',
-        'line-main-black': '#111111',
+        'line-primary-black': '#111111',
+        'line-secondary-black': '#1e1e1e',
         'line-black': '#272727',
       },
       backgroundImage: {

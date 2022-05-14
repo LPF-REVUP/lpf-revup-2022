@@ -2,7 +2,7 @@
   import { copyright, pastEvents } from '$lib/utils/constants'
 </script>
 
-<footer class="bg-line-main-black">
+<footer class="bg-line-primary-black">
   <div>
     <div class="text-center py-4 h-12">
       <a href="/privacy" target="_blank" rel="noopener" class="text-white">個人情報保護方針</a>

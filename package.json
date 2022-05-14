@@ -20,7 +20,8 @@
     "@fontsource/fira-mono": "4.5.0",
     "@line/liff": "2.19.1",
     "@lukeed/uuid": "2.0.0",
-    "cookie": "0.4.1"
+    "cookie": "0.4.1",
+    "dayjs": "1.11.2"
   },
   "devDependencies": {
     "@poppanator/sveltekit-svg": "0.3.2",
@@ -33,6 +34,7 @@
     "autoprefixer": "10.4.5",
     "concurrently": "6.5.1",
     "cross-env": "7.0.3",
+    "csstype": "3.0.11",
     "eslint": "8.14.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-svelte3": "3.4.1",
