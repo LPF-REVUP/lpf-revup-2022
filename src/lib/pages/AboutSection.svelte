@@ -1,4 +1,4 @@
-<section id="about" class="w-full bg-line-main-black p-3">
+<section id="about" class="w-full bg-line-primary-black p-3">
   <div class="pt-20 pb-2.5 md:mx-24">
     <div class="mb-4">
       <div class="ml-2 text-3xl text-line-green font-bold text-left font-biryani-heading">
