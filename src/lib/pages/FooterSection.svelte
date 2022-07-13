@@ -9,7 +9,7 @@
     </div>
     <div class="flex justify-center items-center py-4 h-12">
       {#each pastEvents as event}
-        <a href={event.url} class="mx-2 text-line-green" target="_blank" rel="noopener"
+        <a href={event.url} class="mx-2 text-revup-brand" target="_blank" rel="noopener"
           >{event.text}</a
         >
       {/each}

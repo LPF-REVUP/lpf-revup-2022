@@ -60,10 +60,10 @@
 <section id="about" class="w-full bg-line-primary-black p-3">
   <div class="pt-20 pb-2.5 md:mx-24">
     <div class="mb-4">
-      <div class="ml-2 text-3xl text-line-green font-bold text-left font-biryani-heading">
+      <div class="ml-2 text-3xl text-revup-brand font-bold text-left font-biryani-heading">
         TIMETABLE
       </div>
-      <div class="ml-2 text-lg text-line-green">タイムテーブル</div>
+      <div class="ml-2 text-lg text-revup-brand">タイムテーブル</div>
     </div>
     <div class="p-1">
       <p class="mt-8 mb-4 text-white">
@@ -86,7 +86,7 @@
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
-                      class="bg-line-deep-green text-white border-line-deep-green shadow rounded p-2 m-2"
+                      class="bg-revup-deep-brand text-white border-revup-deep-brand shadow rounded p-2 m-2"
                     >
                       <div
                         class="flex flex-col md:min-h-[183px] min-h-[150px] w-32"
@@ -109,7 +109,7 @@
                     </a>
                   {:else}
                     <div
-                      class="bg-line-secondary-black border-line-deep-green shadow rounded p-2 m-2"
+                      class="bg-line-secondary-black border-revup-deep-brand shadow rounded p-2 m-2"
                     >
                       <div class="flex flex-col md:min-h-[183px] min-h-[150px] w-32 h-40" />
                     </div>

@@ -56,7 +56,7 @@
         <li class="list-none p-0 m-0 flex justify-center items-center">
           <a
             href="#about"
-            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-line-green md:p-0"
+            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
           >
             About
           </a>
@@ -64,7 +64,7 @@
         <li class="list-none p-0 m-0 flex justify-center items-center">
           <a
             href="https://github.com/LPF-REVUP/lpf-revup-2022"
-            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-line-green md:p-0"
+            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
             target="_blank"
             rel="noopener"
           >
@@ -74,7 +74,7 @@
         <li class="list-none p-0 m-0 flex justify-center items-center">
           <button
             type="button"
-            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-line-green md:p-0"
+            class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
             on:click={signIn}
           >
             {#if !signedStatus}

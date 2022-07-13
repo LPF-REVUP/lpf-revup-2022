@@ -17,13 +17,13 @@
       </div>
     </div>
     <div class="py-15 mb-4 w-full">
-      <h2 class="text-center py-4 mb-8 text-line-green text-4xl font-biryani-heading">
+      <h2 class="text-center py-4 mb-8 text-revup-brand text-4xl font-biryani-heading">
         {organization}
       </h2>
-      <h3 class="text-center py-4 mb-8 text-line-green text-3xl font-biryani-heading">
+      <h3 class="text-center py-4 mb-8 text-revup-brand text-3xl font-biryani-heading">
         {conferenceTitle}
       </h3>
-      <h4 class="text-white text-center py-4 mb-8 text-line-green text-lg font-biryani-heading">
+      <h4 class="text-white text-center py-4 mb-8 text-revup-brand text-lg font-biryani-heading">
         {conferenceSubtitle}
       </h4>
       <p
