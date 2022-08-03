@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
-  import MainLogo from '$lib/assets/main-picture-logo.svg'
+  import { SPEAKER, SPONSOR, TIMETABLE } from '$lib/feature'
+  import MainLogo from '$lib/assets/main-picture_invert-logo.svg'
   import GithubLogo from '$lib/assets/github_logo.svg'
   import LoginLogo from '$lib/assets/h__login--hover.svg'
 
@@ -15,7 +16,7 @@
   }
 </script>
 
-<nav class="bg-line-black border-gray-200 h-14 mt-0 translate-y-0 md:w-full px-2 sm:px-4">
+<nav class="bg-revup-deep-brand border-gray-200 h-14 mt-0 translate-y-0 md:w-full px-2 sm:px-4">
   <div class="container flex flex-wrap justify-between align-middle h-14 items-center mx-auto">
     <a href="https://revup.jp" class="flex items-center">
       <img alt="revup 2022 Logo" src={MainLogo} class="w-24" />
@@ -61,6 +62,36 @@
             About
           </a>
         </li>
+        {#if TIMETABLE}
+          <li class="list-none p-0 m-0 flex justify-center items-center">
+            <a
+              href="#timetable"
+              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
+            >
+              Timetable
+            </a>
+          </li>
+        {/if}
+        {#if SPEAKER}
+          <li class="list-none p-0 m-0 flex justify-center items-center">
+            <a
+              href="#speaker"
+              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
+            >
+              Speaker
+            </a>
+          </li>
+        {/if}
+        {#if SPONSOR}
+          <li class="list-none p-0 m-0 flex justify-center items-center">
+            <a
+              href="#sponsor"
+              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-revup-brand md:p-0"
+            >
+              Sponsor
+            </a>
+          </li>
+        {/if}
         <li class="list-none p-0 m-0 flex justify-center items-center">
           <a
             href="https://github.com/LPF-REVUP/lpf-revup-2022"

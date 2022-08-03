@@ -1,5 +1,7 @@
-<main class="flex grow basis-auto shrink-0 items-center justify-center max-w-full bg-line-black">
-  <div class="mx-28">
+<main
+  class="flex grow basis-auto shrink-0 items-center justify-center max-w-full bg-revup-medium-brand"
+>
+  <div class="py-8 px-2 mx-28">
     <h3 class="text-white leading-6 py-4">１.プライバシーポリシー</h3>
     <p class="text-white pl-8">
       当社は、当社が取得した個人情報の取扱いに関し、個人情報の保護に関する法律、個人情報保護に関するガイドライン等の指針、その他個人情報保護に関する関係法令を遵守します。

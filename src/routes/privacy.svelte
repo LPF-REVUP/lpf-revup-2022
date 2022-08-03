@@ -4,6 +4,7 @@
 
 <script lang="ts">
   import PrivacySection from '$lib/pages/PrivacySection.svelte'
+  import SocialSection from '$lib/pages/SocialSection.svelte'
 </script>
 
 <svelte:head>
@@ -22,5 +23,5 @@
     <h1 class="text-white text-4xl">個人情報保護方針</h1>
   </div>
 </div>
-
 <PrivacySection />
+<SocialSection />

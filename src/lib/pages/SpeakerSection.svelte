@@ -2,13 +2,13 @@
   export let items
 </script>
 
-<section id="about" class="w-full bg-line-primary-black p-3">
+<section id="speaker" class="w-full bg-revup-medium-brand p-3">
   <div class="pt-20 pb-2.5 md:mx-24">
     <div class="mb-4">
-      <div class="ml-2 text-3xl text-revup-brand font-bold text-left font-biryani-heading">
+      <div class="ml-2 text-3xl text-line-primary-black font-bold text-left font-biryani-heading">
         SPEAKERS
       </div>
-      <div class="ml-2 text-lg text-revup-brand">スピーカー</div>
+      <div class="ml-2 text-lg text-line-primary-black">スピーカー</div>
     </div>
     <div class="p-1">
       <div class="h-full">

@@ -2,7 +2,9 @@
   import MainLogo from '$lib/assets/main-picture-logo.svg'
 </script>
 
-<main class="flex grow basis-auto shrink-0 max-w-full bg-revup-top">
+<main
+  class="flex grow basis-auto shrink-0 max-w-full bg-revup-top bg-blend-darken bg-no-repeat bg-cover bg-center"
+>
   <div class="flex grow basis-auto shrink items-center justify-center max-w-full relative">
     <div class="m-0 p-0 bg-repeat">
       <div class="">
