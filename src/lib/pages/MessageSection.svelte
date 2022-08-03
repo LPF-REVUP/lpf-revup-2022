@@ -7,23 +7,28 @@
     message2,
     videoUrl,
   } from '$lib/utils/constants'
+  import { START_PROPOSAL, SHOW_YOUTUBE } from '$lib/feature'
 </script>
 
-<section class="w-full mx-auto px-0 bg-line-primary-black p-3">
+<section class="w-full mx-auto px-0 bg-revup-medium-brand py-8 px-3">
   <div class="mx-auto">
-    <div class="mb-4">
-      <div class="flex justify-center items-center">
-        <iframe src={videoUrl} title="revup 2021" width="900" height="600" />
+    {#if SHOW_YOUTUBE}
+      <div class="mb-4">
+        <div class="flex justify-center items-center">
+          <iframe src={videoUrl} title="revup 2021" width="900" height="600" />
+        </div>
       </div>
-    </div>
+    {/if}
     <div class="py-15 mb-4 w-full">
-      <h2 class="text-center py-4 mb-8 text-revup-brand text-4xl font-biryani-heading">
+      <h2 class="text-center py-4 mb-8 text-line-primary-black text-4xl font-biryani-heading">
         {organization}
       </h2>
-      <h3 class="text-center py-4 mb-8 text-revup-brand text-3xl font-biryani-heading">
+      <h3 class="text-center py-4 mb-8 text-line-primary-black text-3xl font-biryani-heading">
         {conferenceTitle}
       </h3>
-      <h4 class="text-white text-center py-4 mb-8 text-revup-brand text-lg font-biryani-heading">
+      <h4
+        class="text-white text-center py-4 mb-8 text-line-primary-black text-lg font-biryani-heading"
+      >
         {conferenceSubtitle}
       </h4>
       <p
@@ -36,6 +41,18 @@
       >
         {message2}
       </p>
+      {#if START_PROPOSAL}
+        <div class="text-center">
+          <a
+            href="#"
+            class="bg-primary-blue p-6 text-white rounded no-underline hover:text-white hover:no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            登壇申し込み(CfP)はこちら！
+          </a>
+        </div>
+      {/if}
     </div>
   </div>
 </section>

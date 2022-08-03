@@ -17,6 +17,7 @@
 
 <script lang="ts">
   import MainSection from '$lib/pages/MainSection.svelte'
+  import NoticeSection from '$lib/pages/NoticeSection.svelte'
   import MessageSection from '$lib/pages/MessageSection.svelte'
   import AboutSection from '$lib/pages/AboutSection.svelte'
   import TimetableSection from '$lib/pages/TimetableSection.svelte'
@@ -40,6 +41,7 @@
 </svelte:head>
 
 <MainSection />
+<NoticeSection />
 <MessageSection />
 <AboutSection />
 {#if TIMETABLE}
