@@ -86,7 +86,7 @@
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
-                      class="bg-primary-blue text-white border-revup-deep-brand shadow rounded p-2 m-2"
+                      class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 m-2"
                     >
                       <div
                         class="flex flex-col md:min-h-[183px] min-h-[150px] w-32"
