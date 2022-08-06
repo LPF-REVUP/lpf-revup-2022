@@ -5,15 +5,11 @@
 :root {
   font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
     'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  --font-mono: 'Fira Mono', monospace;
-  --pure-white: #fff;
-  --primary-color: #4caf4f;
+  --primary-color: #03a678;
   --secondary-color: #dbe7f1;
-  --tertiary-color: #e9ebf1;
   --accent-color: #c00;
   --heading-color: rgba(0, 0, 0, 0.7);
   --text-color: #333;
-  --background-without-opacity: rgba(255, 255, 255, 0.7);
   --column-width: 42rem;
   --column-margin-top: 4rem;
 }
@@ -21,13 +17,6 @@
 body {
   min-height: 100vh;
   margin: 0;
-  /*background-color: var(--primary-color);
-  background: linear-gradient(
-    180deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 10.45%,
-    var(--tertiary-color) 41.35%
-  );*/
 }
 
 body::before {
@@ -81,29 +70,12 @@ h2 {
   font-size: 1rem;
 }
 
-pre {
-  font-size: 16px;
-  font-family: var(--font-mono);
-  background-color: rgba(255, 255, 255, 0.45);
-  border-radius: 3px;
-  box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-  padding: 0.5em;
-  overflow-x: auto;
-  color: var(--text-color);
-}
-
-input,
-button {
-  font-size: inherit;
-  font-family: inherit;
-}
-
-button:focus:not(:focus-visible) {
-  outline: none;
-}
-
 @media (min-width: 720px) {
   h1 {
     font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 }
