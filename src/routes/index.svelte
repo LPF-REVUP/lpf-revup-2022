@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
   import { fetchRes } from '$lib/services/content.service'
-  import { SPEAKER, SPONSOR, TIMETABLE } from '$lib/feature'
+  import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
+  import { staffs } from '$lib/utils/team.constants'
   import { ogDescription, ogTitle, twitterUserName, websiteUrl } from '$lib/utils/constants'
   export async function load() {
     let sponsorRes
@@ -24,6 +25,7 @@
   import SpeakerSection from '$lib/pages/SpeakerSection.svelte'
   import SponsorSection from '$lib/pages/SponsorSection.svelte'
   import SocialSection from '$lib/pages/SocialSection.svelte'
+  import TeamSection from '$lib/pages/TeamSection.svelte'
   export let sponsors
   export let speakers
   export let sessions
@@ -44,6 +46,9 @@
 <NoticeSection />
 <MessageSection />
 <AboutSection />
+{#if TEAM}
+  <TeamSection items={staffs} />
+{/if}
 {#if TIMETABLE}
   <TimetableSection items={sessions.contents} />
 {/if}
