@@ -745,6 +745,9 @@ video {
 .max-w-\[140px\] {
   max-width: 140px;
 }
+.max-w-\[160px\] {
+  max-width: 160px;
+}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -1064,6 +1067,9 @@ video {
 }
 .leading-8 {
   line-height: 2rem;
+}
+.leading-4 {
+  line-height: 1rem;
 }
 .text-white {
   --tw-text-opacity: 1;
