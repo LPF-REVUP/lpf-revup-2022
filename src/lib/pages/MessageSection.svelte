@@ -44,7 +44,7 @@
       {#if START_PROPOSAL}
         <div class="text-center">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScnobfq__EAkNXE7ZjUaz4lIa7F9CgX28dpvYuydE1wpZeQ7Q/viewform"
+            href="https://zenn.dev/linedc/articles/58b8148aa77d29"
             class="bg-primary-blue p-6 text-white rounded no-underline hover:text-white hover:no-underline"
             target="_blank"
             rel="noopener noreferrer"
