@@ -3,14 +3,13 @@ export const organization = 'LINE Developers Community'
 export const conferenceTitle = 'REV UP 2022'
 
 export const conferenceSubtitle =
-  'Get Connected with LINE／LINEを介して実現される様々な繋がりや連携'
+  'Seamless and Comfortable DX'
 
 export const message1 =
   'LINE Developers Community REV UP 2022（以下、「REV UP」） はLINEのコミュニティが主催する国内最大のLINE関連カンファレンスです。各分野のエキスパートがLINE関連の技術や事例、知見について惜しみなく発信する様々なセッションが今年も数多く行われます。'
 
-// WIP
 export const message2 =
-  'また、今年のテーマは「Get Connected with LINE」です。ぜひ、本カンファレンスを介して様々な繋がり出会いを実現していただければ幸いです。'
+  'また、今年のテーマは「Seamless and Comfortable DX」です。ぜひ、本カンファレンスを介して様々な繋がり出会いを実現していただければ幸いです。'
 
 export const ogTitle = 'LINE Developers Community REV UP 2022'
 
