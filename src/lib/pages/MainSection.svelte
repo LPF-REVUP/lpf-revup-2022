@@ -12,7 +12,7 @@
           <div class="pt-8 pb-8">
             <div class="text-center">
               <div class="pb-6 mb-3">
-                <img alt="revup 2022 Logo" src={MainLogo} class="w-[48vw]" />
+                <img alt="revup 2022 Logo" src={MainLogo} class="w-[360px] md:w-[48vw]" />
               </div>
               <div class="bg-white p-2.5 text-revup-brand mb-3 p-5 text-center">
                 <p class="text-revup-brand text-lg font-biryani-heading">SPONSOR</p>
