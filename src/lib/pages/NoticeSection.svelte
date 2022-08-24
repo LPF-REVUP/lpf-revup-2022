@@ -1,6 +1,6 @@
 <script lang="ts">
   import dayjs from 'dayjs'
-  import { notices } from '$lib/notice'
+  import { notices } from '$lib/utils/notice.constants'
 </script>
 
 <section class="grow basis-auto shrink-0 mx-auto w-full max-w-full bg-revup-light-brand">
