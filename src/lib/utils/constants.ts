@@ -2,8 +2,7 @@ export const organization = 'LINE Developers Community'
 
 export const conferenceTitle = 'REV UP 2022'
 
-export const conferenceSubtitle =
-  'Seamless and Comfortable DX'
+export const conferenceSubtitle = 'Seamless and Comfortable DX'
 
 export const message1 =
   'LINE Developers Community REV UP 2022（以下、「REV UP」） はLINEのコミュニティが主催する国内最大のLINE関連カンファレンスです。各分野のエキスパートがLINE関連の技術や事例、知見について惜しみなく発信する様々なセッションが今年も数多く行われます。'
