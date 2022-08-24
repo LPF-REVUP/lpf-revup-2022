@@ -1,6 +1,6 @@
-# Rev Up 2022
+# REV UP 2022
 
-This repository is the source code for the Rev Up 2022 website.
+This repository is the source code for the REV UP 2022 website.
 
 ## Setup
 
