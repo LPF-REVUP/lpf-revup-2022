@@ -322,12 +322,6 @@ textarea::-moz-placeholder {
   color: #9ca3af; /* 2 */
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  opacity: 1; /* 1 */
-  color: #9ca3af; /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1; /* 1 */
@@ -670,9 +664,6 @@ video {
 .hidden {
   display: none;
 }
-.h-48 {
-  height: 12rem;
-}
 .h-full {
   height: 100%;
 }
@@ -693,6 +684,9 @@ video {
 }
 .h-\[335px\] {
   height: 335px;
+}
+.h-48 {
+  height: 12rem;
 }
 .min-h-\[120px\] {
   min-height: 120px;
@@ -1012,10 +1006,6 @@ video {
 .font-biryani-heading {
   font-family: 'Biryani', sans-serif;
 }
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1039,6 +1029,10 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-6xl {
   font-size: 3.75rem;
