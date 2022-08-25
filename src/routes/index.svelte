@@ -40,6 +40,7 @@
   <meta name="twitter:url" content={websiteUrl} />
   <meta name="twitter:creator" content={`@${twitterUserName}`} />
   <meta name="twitter:site" content={`A;@${twitterUserName}`} />
+  <meta name="twitter:image" content={`${websiteUrl}top_og.png`} />
 </svelte:head>
 
 <MainSection />
