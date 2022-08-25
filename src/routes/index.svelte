@@ -35,6 +35,12 @@
   <html lang="ja" />
   <title>{ogTitle}</title>
   <meta name="description" content={ogDescription} />
+  <meta name="og:site_name" content={ogTitle} />
+  <meta name="og:type" content="website" />
+  <meta name="og:description" content={ogDescription} />
+  <meta name="og:title" content={ogTitle} />
+  <meta name="og:url" content={websiteUrl} />
+  <meta name="og:image" content={`${websiteUrl}top_og.png`} />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={ogDescription} />
   <meta name="twitter:url" content={websiteUrl} />
