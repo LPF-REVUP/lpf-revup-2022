@@ -47,6 +47,7 @@
   <meta name="twitter:creator" content={`@${twitterUserName}`} />
   <meta name="twitter:site" content={`A;@${twitterUserName}`} />
   <meta name="twitter:image" content={`${websiteUrl}top_og.png`} />
+  <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <MainSection />
