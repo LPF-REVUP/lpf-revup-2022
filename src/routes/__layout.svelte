@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import AnalyticsSection from '$lib/pages/AnalyticsSection.svelte'
   import NavSection from '$lib/pages/NavSection.svelte'
   import FooterSection from '$lib/pages/FooterSection.svelte'
   import { variables } from '$lib/variables'
@@ -44,6 +45,7 @@
   })
 </script>
 
+<AnalyticsSection />
 <NavSection
   signedStatus={liffObject?.isLoggedIn()}
   {profileName}
