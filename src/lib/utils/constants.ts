@@ -15,7 +15,7 @@ export const ogTitle = 'LINE Developers Community REV UP 2022'
 export const ogDescription =
   'LINE Developers Community REV UP 2022 はLINEのコミュニティが主催する国内最大のLINE関連カンファレンスです。各分野のエキスパートがLINE関連の技術や事例、知見について惜しみなく発信する様々なセッションが今年も数多く行われます。'
 
-export const websiteUrl = 'https://revup.jp/2022'
+export const websiteUrl = 'https://revup.jp/'
 
 export const twitterUserName = 'linedc_jp'
 
