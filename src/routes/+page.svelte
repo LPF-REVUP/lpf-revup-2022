@@ -1,21 +1,3 @@
-<script context="module" lang="ts">
-  import { fetchRes } from '$lib/services/content.service'
-  import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
-  import { staffs } from '$lib/utils/team.constants'
-  import { ogDescription, ogTitle, twitterUserName, websiteUrl } from '$lib/utils/constants'
-  export async function load() {
-    let sponsorRes
-    let speakerRes
-    let sessionRes
-    Promise.all([
-      (sponsorRes = await fetchRes('sponsors')),
-      (speakerRes = await fetchRes('speakers')),
-      (sessionRes = await fetchRes('sessions')),
-    ])
-    return { props: { sponsors: sponsorRes, speakers: speakerRes, sessions: sessionRes } }
-  }
-</script>
-
 <script lang="ts">
   import MainSection from '$lib/pages/MainSection.svelte'
   import NoticeSection from '$lib/pages/NoticeSection.svelte'
@@ -26,9 +8,12 @@
   import SponsorSection from '$lib/pages/SponsorSection.svelte'
   import SocialSection from '$lib/pages/SocialSection.svelte'
   import TeamSection from '$lib/pages/TeamSection.svelte'
-  export let sponsors
-  export let speakers
-  export let sessions
+
+  import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
+  import { staffs } from '$lib/utils/team.constants'
+  import { ogDescription, ogTitle, twitterUserName, websiteUrl } from '$lib/utils/constants'
+
+  export let data
 </script>
 
 <svelte:head>
@@ -58,12 +43,12 @@
   <TeamSection items={staffs} />
 {/if}
 {#if TIMETABLE}
-  <TimetableSection items={sessions.contents} />
+  <TimetableSection items={data.sessions.contents} />
 {/if}
 {#if SPEAKER}
-  <SpeakerSection items={speakers.contents} />
+  <SpeakerSection items={data.speakers.contents} />
 {/if}
 {#if SPONSOR}
-  <SponsorSection items={sponsors.contents} />
+  <SponsorSection items={data.sponsors.contents} />
 {/if}
 <SocialSection />
