@@ -14,10 +14,10 @@
       <div class="h-full">
         <div class="mr-2 mb-3 w-full flex flex-wrap gap-px">
           {#each items as sponsor}
-            <div class="p-4">
+            <div class="px-2 py-4">
               <a href={sponsor.link} target="_blank" rel="noopener">
                 <img alt={`${sponsor.name} logo`} src={sponsor.image.url} class="md:w-72 w-36" />
-                <div class="flex flex-col">
+                <div class="flex flex-col items-center justify-center">
                   <h3
                     class="md:text-lg text-md md:text-center max-w-[140px] leading-6 text-white font-bold"
                   >

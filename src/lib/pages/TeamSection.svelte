@@ -14,7 +14,7 @@
       <div class="h-full">
         <div class="mr-2 mb-3 w-full flex flex-wrap gap-px">
           {#each items as staff}
-            <div class="p-4">
+            <div class="px-2 py-4 flex flex-col align-middle items-center justify-center">
               <img
                 alt={`${staff.name} logo`}
                 src={staff.image}
@@ -22,17 +22,17 @@
               />
               <div class="flex flex-col items-center justify-center">
                 <h3
-                  class="md:text-lg text-md md:text-center max-w-[140px] leading-6 text-white font-bold"
+                  class="md:text-lg text-md md:text-center max-w-[140px] h-6 leading-6 text-white font-bold"
                 >
                   {`${staff.name}`}
                 </h3>
                 <h4
-                  class="md:text-md text-sm md:text-center max-w-[160px] leading-4 text-white font-normal"
+                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 leading-4 text-white font-normal"
                 >
                   {`${staff.company}`}
                 </h4>
                 <p
-                  class="md:text-md text-sm md:text-center max-w-[160px] leading-2 text-white font-normal"
+                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 leading-2 text-white font-normal"
                 >
                   {`${staff.description}`}
                 </p>
