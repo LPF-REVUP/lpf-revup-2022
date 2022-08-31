@@ -42,13 +42,13 @@
 {#if TEAM}
   <TeamSection items={staffs} />
 {/if}
-{#if TIMETABLE}
+{#if TIMETABLE && data.sessions.totalCount !== 0}
   <TimetableSection items={data.sessions.contents} />
 {/if}
-{#if SPEAKER}
+{#if SPEAKER && data.speakers.totalCount !== 0}
   <SpeakerSection items={data.speakers.contents} />
 {/if}
-{#if SPONSOR}
+{#if SPONSOR && data.sponsors.totalCount !== 0}
   <SponsorSection items={data.sponsors.contents} />
 {/if}
 <SocialSection />

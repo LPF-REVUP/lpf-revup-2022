@@ -682,14 +682,14 @@ video {
 .h-6 {
   height: 1.5rem;
 }
+.h-8 {
+  height: 2rem;
+}
 .h-\[335px\] {
   height: 335px;
 }
 .h-48 {
   height: 12rem;
-}
-.h-8 {
-  height: 2rem;
 }
 .min-h-\[120px\] {
   min-height: 120px;
