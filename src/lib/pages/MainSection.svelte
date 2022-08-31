@@ -23,11 +23,11 @@
                 />
               </div>
               <div>
-                <span class="text-2xl text-white">2022.</span>
-                <span class="text-4xl text-white">10.22</span>
-                <span class="text-2xl text-white">[Sat]</span>
+                <span class="text-2xl md:text-4xl font-biryani-heading text-white">2022.</span>
+                <span class="text-4xl md:text-6xl font-biryani-heading text-white">10.22</span>
+                <span class="text-2xl md:text-4xl font-biryani-heading text-white">[Sat]</span>
               </div>
-              <div class="text-2xl text-white">@ONLINE</div>
+              <div class="text-2xl font-biryani-heading text-white">@ONLINE</div>
             </div>
           </div>
         </div>

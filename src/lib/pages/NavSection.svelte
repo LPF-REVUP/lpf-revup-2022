@@ -31,14 +31,14 @@
     <button
       data-collapse-toggle="mobile-menu"
       type="button"
-      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
       aria-controls="mobile-menu"
       aria-expanded="false"
       on:click={toggleMenu}
     >
       <span class="sr-only">Open main menu</span>
       <svg
-        class="w-6 h-6"
+        class="w-6 h-6 text-white"
         aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 20 20"
