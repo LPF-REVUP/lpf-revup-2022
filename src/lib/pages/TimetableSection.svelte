@@ -1,6 +1,7 @@
 <script lang="ts">
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
+  import style from '$lib/services/style.service'
   dayjs.extend(duration)
   export let items
   $: hourLabels = () => {
@@ -8,20 +9,20 @@
     const max = items.map((s) => dayjs(s.endsAt)).reduce((a, b) => (dayjs(a).isAfter(b) ? a : b))
     const maxHour = max.minute() ? max.hour() + 1 : max.hour()
     const result = []
-    for (let i = minHour; i <= maxHour; i++) {
+    for (let i = minHour; i < maxHour; i++) {
       result.push(i + ':00')
     }
     return result
   }
   const areas = ['tech', 'biz', 'pioneer', 'collabo', 'hands'].map(
-    (id) => items.filter((s) => s.area.id === id)[0].area,
+    (id) => items.filter((s) => s.area?.id === id)[0]?.area,
   )
   const minStartAt = items
     .map((s) => dayjs(s.startsAt))
     .reduce((a, b) => (dayjs(a).isBefore(b) ? a : b))
   const sessionLength = (session) => {
     const hours = dayjs.duration(dayjs(session.endsAt).diff(session.startsAt)).asHours()
-    return `${hours * 425 - 8}px`
+    return `${hours * 425 + (hours / 0.5 - 1) * 8 * 4}px`
   }
   const showSessions = (areaId) => {
     const sortedSessions = items
@@ -36,7 +37,7 @@
       tags: [],
       applicantsMessage: '',
     }
-    let fromIndex = dayjs()
+    let fromIndex = dayjs(minStartAt)
     sortedSessions.forEach((s, index) => {
       if (!s.color) s.color = '#666666'
       const startAt = dayjs(s.startsAt)
@@ -74,31 +75,31 @@
           <div class="flex flex-wrap">
             <div class="mt-12">
               {#each hourLabels() as hourLabel}
-                <div class="flex flex-col md:h-[425px] h-[335px] p-2 m-2 text-white">
+                <div class="flex flex-col md:h-[473px] h-[383px] p-2 m-2 text-white">
                   {hourLabel}
                 </div>
               {/each}
             </div>
             {#each areas as area}
-              <div class="flex flex-col p-2 m-2 text-white">
-                {area.name}
-                {#each showSessions(area.id) as session}
+              <div class="flex flex-col p-2 text-white">
+                {area?.name}
+                {#each showSessions(area?.id) as session}
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
-                      class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 m-2"
+                      class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
                     >
                       <div
-                        class="flex flex-col md:min-h-[183px] min-h-[150px] w-32"
-                        style={{ height: sessionLength(session) }}
+                        class="flex flex-col md:min-h-[183px] min-h-[150px] w-40"
+                        use:style={{ height: sessionLength(session) }}
                       >
                         {#each session.speakers as speaker}
                           <h3>{session.title}</h3>
-                          <div class="flex items-center">
+                          <div class="flex items-center mb-4">
                             <img
                               alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
                               src={speaker.image.url}
-                              class="w-8 object-cover rounded-[50%]"
+                              class="w-6 object-cover rounded-[50%]"
                             />
                             <div class="flex flex-col text-sm ml-2">
                               {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
@@ -109,7 +110,7 @@
                     </a>
                   {:else}
                     <div
-                      class="bg-line-secondary-black border-revup-deep-brand shadow rounded p-2 m-2"
+                      class="bg-line-secondary-black border-revup-deep-brand shadow rounded p-6 my-2"
                     >
                       <div class="flex flex-col md:min-h-[183px] min-h-[150px] w-32 h-40" />
                     </div>
