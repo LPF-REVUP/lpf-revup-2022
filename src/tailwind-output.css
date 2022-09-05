@@ -586,6 +586,10 @@ video {
   margin-left: 7rem;
   margin-right: 7rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mt-16 {
   margin-top: 4rem;
 }
@@ -685,8 +689,8 @@ video {
 .h-8 {
   height: 2rem;
 }
-.h-\[335px\] {
-  height: 335px;
+.h-\[383px\] {
+  height: 383px;
 }
 .h-48 {
   height: 12rem;
@@ -1208,8 +1212,8 @@ video {
     height: auto;
   }
 
-  .md\:h-\[425px\] {
-    height: 425px;
+  .md\:h-\[473px\] {
+    height: 473px;
   }
 
   .md\:min-h-\[183px\] {
