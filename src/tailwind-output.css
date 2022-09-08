@@ -695,6 +695,21 @@ video {
 .h-48 {
   height: 12rem;
 }
+.h-80 {
+  height: 20rem;
+}
+.h-96 {
+  height: 24rem;
+}
+.h-\[400px\] {
+  height: 400px;
+}
+.h-\[600px\] {
+  height: 600px;
+}
+.h-\[520px\] {
+  height: 520px;
+}
 .min-h-\[120px\] {
   min-height: 120px;
 }
@@ -1308,6 +1323,11 @@ video {
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .md\:pt-6 {
