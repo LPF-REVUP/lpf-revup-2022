@@ -25,7 +25,7 @@
               </a>
             {/each}
           </div>
-          <p class="text-white md:text-xl px-24 md:px-2">
+          <p class="text-white md:text-xl md:px-24 px-2">
             {@html session.description}
           </p>
         </div>

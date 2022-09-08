@@ -19,13 +19,10 @@
                 <img alt={`${sponsor.name} logo`} src={sponsor.image.url} class="md:w-72 w-36" />
                 <div class="flex flex-col items-center justify-center">
                   <h3
-                    class="md:text-lg text-md md:text-center max-w-[140px] leading-6 text-white font-bold"
+                    class="md:text-lg text-md md:text-center max-w-[140px] h-8 leading-8 text-white font-bold"
                   >
                     {sponsor.name}
                   </h3>
-                  <h4 class="md:text-md text-sm md:text-center leading-8 text-white font-normal">
-                    {sponsor.rank}
-                  </h4>
                 </div>
               </a>
             </div>

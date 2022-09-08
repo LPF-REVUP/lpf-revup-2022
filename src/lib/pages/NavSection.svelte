@@ -78,7 +78,7 @@
           {#if TIMETABLE}
             <li>
               <a
-                href="#timetable"
+                href="/#timetable"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 on:click={toggleMenu}
               >
@@ -89,7 +89,7 @@
           {#if SPEAKER}
             <li>
               <a
-                href="#speaker"
+                href="/#speaker"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 on:click={toggleMenu}
               >
@@ -100,7 +100,7 @@
           {#if SPONSOR}
             <li>
               <a
-                href="#sponsor"
+                href="/#sponsor"
                 class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
                 on:click={toggleMenu}
               >
@@ -124,7 +124,7 @@
         {#if TIMETABLE}
           <li class="list-none p-0 m-0 flex justify-center items-center">
             <a
-              href="#timetable"
+              href="/#timetable"
               class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
             >
               Timetable
@@ -134,7 +134,7 @@
         {#if SPEAKER}
           <li class="list-none p-0 m-0 flex justify-center items-center">
             <a
-              href="#speaker"
+              href="/#speaker"
               class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
             >
               Speaker
@@ -144,7 +144,7 @@
         {#if SPONSOR}
           <li class="list-none p-0 m-0 flex justify-center items-center">
             <a
-              href="#sponsor"
+              href="/#sponsor"
               class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
             >
               Sponsor

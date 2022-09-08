@@ -93,8 +93,8 @@
                         class="flex flex-col md:min-h-[183px] min-h-[150px] w-40"
                         use:style={{ height: sessionLength(session) }}
                       >
+                        <h3>{session.title}</h3>
                         {#each session.speakers as speaker}
-                          <h3>{session.title}</h3>
                           <div class="flex items-center mb-4">
                             <img
                               alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
