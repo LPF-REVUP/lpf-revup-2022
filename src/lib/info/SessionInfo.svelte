@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let session
+  import type { Session } from '../../app'
+  export let session: Session
 </script>
 
 <div class="py-16 bg-revup-medium-brand">

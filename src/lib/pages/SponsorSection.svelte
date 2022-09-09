@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let items
+  import type { Sponsor } from '../../app'
+  export let items: Sponsor[]
 </script>
 
 <section id="sponsor" class="w-full bg-revup-medium-brand p-3">

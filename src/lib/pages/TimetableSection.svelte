@@ -2,8 +2,9 @@
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
   import style from '$lib/services/style.service'
+  import type { Session } from '../../app'
   dayjs.extend(duration)
-  export let items
+  export let items: Session[]
   $: hourLabels = () => {
     const minHour = minStartAt.hour()
     const max = items.map((s) => dayjs(s.endsAt)).reduce((a, b) => (dayjs(a).isAfter(b) ? a : b))
@@ -20,15 +21,15 @@
   const minStartAt = items
     .map((s) => dayjs(s.startsAt))
     .reduce((a, b) => (dayjs(a).isBefore(b) ? a : b))
-  const sessionLength = (session) => {
+  const sessionLength = (session: Session) => {
     const hours = dayjs.duration(dayjs(session.endsAt).diff(session.startsAt)).asHours()
     return `${hours * 425 + (hours / 0.5 - 1) * 8 * 4}px`
   }
-  const showSessions = (areaId) => {
+  const showSessions = (areaId: string) => {
     const sortedSessions = items
       .filter((s) => s.area.id === areaId)
       .sort((a, b) => dayjs(a.startsAt).diff(b.startsAt))
-    const result = []
+    const result: Session[] = []
     const dummySessionBase = {
       title: '',
       description: '',

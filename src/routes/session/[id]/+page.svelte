@@ -6,10 +6,11 @@
   import SocialSection from '$lib/pages/SocialSection.svelte'
 
   import { ogTitle } from '$lib/utils/constants'
+  import type { Session } from '../../../app'
 
-  export let data
+  export let data: { id: string; session: Session }
 
-  const filterTime = (time) => {
+  const filterTime = (time: Date | string) => {
     return dayjs(time).format('HH:mm')
   }
 </script>

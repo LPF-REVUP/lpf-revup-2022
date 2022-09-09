@@ -1,9 +1,10 @@
 import { fetchRes } from '$lib/services/content.service'
+import type { Session, Speaker, Sponsor } from '../app'
 
 export async function load() {
-  let sponsorRes
-  let speakerRes
-  let sessionRes
+  let sponsorRes: Promise<{ totalCount: number; contents: Sponsor[] }>
+  let speakerRes: Promise<{ totalCount: number; contents: Speaker[] }>
+  let sessionRes: Promise<{ totalCount: number; contents: Session[] }>
   Promise.all([
     (sponsorRes = await fetchRes('sponsors')),
     (speakerRes = await fetchRes('speakers')),
