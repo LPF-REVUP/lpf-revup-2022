@@ -18,3 +18,69 @@ declare namespace App {
 
   // interface PublicEnv {}
 }
+
+export interface Staff {
+  name: string
+  description: string
+  company: string
+  image: string
+}
+
+interface Image {
+  url: string
+}
+
+interface Area {
+  id: string
+  name: string
+}
+
+interface Tag {
+  name: string
+}
+
+export interface Sponsor {
+  name: string
+  link: string
+  image: Image
+  rank: string
+}
+
+export interface Speaker {
+  id: string
+  firstNameJp: string
+  familyNameJp: string
+  firstNameEn: string
+  familyNameEn: string
+  title: string
+  affiliation: string
+  profile: string
+  image: Image
+  sessions: Session[]
+  twitter: string
+  facebook: string
+  hideInSpeakerList: boolean
+}
+
+export interface Session {
+  id: string
+  title: string
+  description: string
+  area: Area // if you use microCMS team plan
+  startsAt: Date | string
+  endsAt: Date | string
+  applicationPage: string
+  speakers: Speaker[]
+  tags: Tag[] // if you use microCMS team plan
+  applicantsMessage: string
+  documentUrl?: string
+  movieUrl?: string
+  color?: string
+  applicantCount?: number
+}
+
+export interface MicroCMSEndpoint {
+  sponsors: { totalCount: number; contents: Sponsor[] }
+  speakers: { totalCount: number; contents: Speaker[] }
+  sessions: { totalCount: number; contents: Session[] }
+}

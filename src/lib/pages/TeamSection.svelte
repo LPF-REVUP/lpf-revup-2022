@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let items
+  import type { Staff } from '../../app'
+  export let items: Staff[]
 </script>
 
 <section id="team" class="w-full bg-revup-medium-brand p-3">

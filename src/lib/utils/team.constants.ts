@@ -1,9 +1,4 @@
-interface Staff {
-  name: string
-  description: string
-  company: string
-  image: string
-}
+import type { Staff } from '../../app'
 
 export const staffs: Staff[] = [
   {
