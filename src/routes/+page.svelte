@@ -12,8 +12,9 @@
   import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
   import { staffs } from '$lib/utils/team.constants'
   import { ogDescription, ogTitle, twitterUserName, websiteUrl } from '$lib/utils/constants'
+  import type { MicroCMSEndpoint } from '../app'
 
-  export let data
+  export let data: MicroCMSEndpoint
 </script>
 
 <svelte:head>
