@@ -11,6 +11,11 @@
   <html lang="ja" />
   <title>{`個人情報保護方針 | ${ogTitle}`}</title>
   <meta name="description" content={ogDescription} />
+  <meta name="og:site_name" content={`個人情報保護方針 | ${ogTitle}`} />
+  <meta name="og:type" content="website" />
+  <meta name="og:description" content={ogDescription} />
+  <meta name="og:title" content={`個人情報保護方針 | ${ogTitle}`} />
+  <meta name="og:url" content={`${websiteUrl}/privacy`} />
   <meta name="twitter:title" content={ogTitle} />
   <meta name="twitter:description" content={ogDescription} />
   <meta name="twitter:url" content={`${websiteUrl}/privacy`} />
