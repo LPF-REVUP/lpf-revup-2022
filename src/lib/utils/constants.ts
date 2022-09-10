@@ -10,6 +10,11 @@ export const message1 =
 export const message2 =
   'また、今年のテーマは「Seamless and Comfortable DX」です。ぜひ、本カンファレンスを介して様々な繋がり出会いを実現していただければ幸いです。'
 
+export const developerName = 'jiyuujin (Yuma Kitamura)'
+
+export const developerDescription =
+  'Web Developer や Accessibility adovocator、HR adviser として活動しています。 REV UP 2022のウェブサイトを制作させていただきました。'
+
 export const ogTitle = 'LINE Developers Community REV UP 2022'
 
 export const ogDescription =
@@ -23,6 +28,29 @@ export const twitterUserName = 'linedc_jp'
 export const videoUrl = 'https://www.youtube.com/watch?v=TmVcKYFz6Tc'
 
 export const copyright = '© LINE Developers Community REV UP 2022'
+
+export const developerLinks = [
+  {
+    value: 'github',
+    text: 'GitHub',
+    url: 'https://github.com/jiyuujin',
+  },
+  {
+    value: 'tech_blog',
+    text: 'Tech Blog',
+    url: 'https://webneko.dev/',
+  },
+  {
+    value: 'twitter',
+    text: 'Twitter',
+    url: 'https://twitter.com/jiyuujinlab',
+  },
+  {
+    value: 'email',
+    text: 'Email',
+    url: 'mailto://jiyuujinunite@gmail.com',
+  },
+]
 
 export const socialLinks = [
   {
