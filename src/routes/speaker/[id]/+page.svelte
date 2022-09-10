@@ -3,8 +3,9 @@
   import SocialSection from '$lib/pages/SocialSection.svelte'
 
   import { ogTitle, websiteUrl } from '$lib/utils/constants'
+  import type { Speaker } from '../../../app'
 
-  export let data
+  export let data: { id: string; speaker: Speaker }
 </script>
 
 <svelte:head>

@@ -582,21 +582,13 @@ video {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.mx-28 {
-  margin-left: 7rem;
-  margin-right: 7rem;
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 .mt-16 {
   margin-top: 4rem;
@@ -694,6 +686,9 @@ video {
 .h-6 {
   height: 1.5rem;
 }
+.h-24 {
+  height: 6rem;
+}
 .h-8 {
   height: 2rem;
 }
@@ -757,6 +752,9 @@ video {
 .max-w-\[140px\] {
   max-width: 140px;
 }
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -801,9 +799,6 @@ video {
 .list-none {
   list-style-type: none;
 }
-.flex-row {
-  flex-direction: row;
-}
 .flex-col {
   flex-direction: column;
 }
@@ -830,6 +825,14 @@ video {
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.self-center {
+  align-self: center;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -848,6 +851,9 @@ video {
 .rounded-\[50\%\] {
   border-radius: 50%;
 }
+.rounded-md {
+  border-radius: 0.375rem;
+}
 .border {
   border-width: 1px;
 }
@@ -861,6 +867,10 @@ video {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 .border-revup-deep-brand {
   --tw-border-opacity: 1;
@@ -897,6 +907,10 @@ video {
 .bg-revup-light-brand {
   --tw-bg-opacity: 1;
   background-color: rgb(210 244 197 / var(--tw-bg-opacity));
+}
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 .bg-line-secondary-black {
   --tw-bg-opacity: 1;
@@ -977,6 +991,10 @@ video {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .pt-20 {
   padding-top: 5rem;
 }
@@ -1009,6 +1027,9 @@ video {
 }
 .pl-8 {
   padding-left: 2rem;
+}
+.pt-4 {
+  padding-top: 1rem;
 }
 .text-left {
   text-align: left;
@@ -1104,6 +1125,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+.text-line-secondary-black {
+  --tw-text-opacity: 1;
+  color: rgb(30 30 30 / var(--tw-text-opacity));
+}
+.text-line-black {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 39 / var(--tw-text-opacity));
+}
 .no-underline {
   -webkit-text-decoration-line: none;
   text-decoration-line: none;
@@ -1161,6 +1190,10 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:text-revup-light-brand:hover {
+  --tw-text-opacity: 1;
+  color: rgb(210 244 197 / var(--tw-text-opacity));
 }
 .hover\:no-underline:hover {
   -webkit-text-decoration-line: none;
@@ -1281,10 +1314,6 @@ video {
     flex-direction: row;
   }
 
-  .md\:flex-col {
-    flex-direction: column;
-  }
-
   .md\:flex-wrap {
     flex-wrap: wrap;
   }
@@ -1293,6 +1322,22 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:justify-self-start {
+    justify-self: start;
   }
 
   .md\:border-0 {
@@ -1325,6 +1370,16 @@ video {
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:px-72 {
+    padding-left: 18rem;
+    padding-right: 18rem;
   }
 
   .md\:text-left {

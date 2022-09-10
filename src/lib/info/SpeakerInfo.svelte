@@ -1,7 +1,8 @@
 <script lang="ts">
   import TwitterLogo from '$lib/assets/twitter_logo.svg'
   import style from '$lib/services/style.service'
-  export let speaker
+  import type { Speaker } from '../../app'
+  export let speaker: Speaker
 </script>
 
 <div class="py-16 bg-revup-medium-brand">

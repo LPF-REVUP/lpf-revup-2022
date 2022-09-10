@@ -1,5 +1,6 @@
 <script lang="ts">
-  export let items
+  import type { Speaker } from '../../app'
+  export let items: Speaker[]
 </script>
 
 <section id="speaker" class="w-full bg-revup-medium-brand p-3">
