@@ -16,6 +16,20 @@
     content={`${data.speaker.familyNameJp}${data.speaker.firstNameJp}の自己紹介ページです。`}
   />
   <meta
+    name="og:site_name"
+    content={`${data.speaker.familyNameJp} ${data.speaker.firstNameJp} | ${ogTitle}`}
+  />
+  <meta name="og:type" content="website" />
+  <meta
+    name="og:description"
+    content={`${data.speaker.familyNameJp}${data.speaker.firstNameJp}の自己紹介ページです。`}
+  />
+  <meta
+    name="og:title"
+    content={`${data.speaker.familyNameJp} ${data.speaker.firstNameJp} | ${ogTitle}`}
+  />
+  <meta name="og:url" content={`${websiteUrl}/speaker/${data.id}`} />
+  <meta
     name="twitter:title"
     content={`${data.speaker.familyNameJp} ${data.speaker.firstNameJp} | ${ogTitle}`}
   />
