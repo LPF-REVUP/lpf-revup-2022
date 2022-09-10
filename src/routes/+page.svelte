@@ -8,6 +8,7 @@
   import SponsorSection from '$lib/pages/SponsorSection.svelte'
   import SocialSection from '$lib/pages/SocialSection.svelte'
   import TeamSection from '$lib/pages/TeamSection.svelte'
+  import ProfileSection from '$lib/pages/ProfileSection.svelte'
 
   import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
   import { staffs } from '$lib/utils/team.constants'
@@ -52,4 +53,5 @@
 {#if SPONSOR && data.sponsors.totalCount !== 0}
   <SponsorSection items={data.sponsors.contents} />
 {/if}
+<ProfileSection />
 <SocialSection />
