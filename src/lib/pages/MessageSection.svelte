@@ -15,7 +15,7 @@
     {#if SHOW_YOUTUBE}
       <div class="mb-4">
         <div class="flex justify-center items-center">
-          <iframe src={videoUrl} title="revup 2021" width="900" height="600" />
+          <iframe src={videoUrl} title="revup 2022 lp" width="900" height="600" />
         </div>
       </div>
     {/if}
