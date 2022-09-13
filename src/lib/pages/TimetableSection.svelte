@@ -15,7 +15,7 @@
     }
     return result
   }
-  const areas = ['tech', 'biz', 'pioneer', 'collabo', 'hands'].map(
+  const areas = ['biz', 'tech', 'hands', 'pioneer', 'collabo'].map(
     (id) => items.filter((s) => s.area?.id === id)[0]?.area,
   )
   const minStartAt = items

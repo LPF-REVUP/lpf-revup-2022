@@ -33,7 +33,14 @@
                   >
                     {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                   </h4>
-                  {#if speaker.title !== undefined && speaker.title.indexOf('掲載したい') === -1}
+                  {#if speaker.affiliation !== undefined}
+                    <p
+                      class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-2 font-normal"
+                    >
+                      {speaker.affiliation}
+                    </p>
+                  {/if}
+                  {#if speaker.title !== undefined}
                     <p
                       class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-2 font-normal"
                     >
