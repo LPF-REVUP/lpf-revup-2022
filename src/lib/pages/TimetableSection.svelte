@@ -71,18 +71,18 @@
       <p class="mt-8 mb-4 text-white">
         今年は各セッション毎の申し込みは不要です。上部のボタンよりお申し込み下さい。視聴URL、資料等はConnpassで共有いたします。
       </p>
-      <div class="mt-12">
+      <div class="mt-12 overflow-x-scroll max-w-[800px] md:max-w-full">
         <div class="flex md:flex-wrap flex-col">
-          <div class="flex flex-wrap">
+          <div class="flex flex-wrap flex-nowrap">
             <div class="mt-12">
               {#each hourLabels() as hourLabel}
-                <div class="flex flex-col md:h-[473px] h-[383px] p-2 m-2 text-white">
+                <div class="flex flex-col h-[473px] p-2 m-2 text-white">
                   {hourLabel}
                 </div>
               {/each}
             </div>
             {#each areas as area}
-              <div class="flex flex-col p-2 text-white">
+              <div class="flex md:flex-wrap flex-col p-2 text-white">
                 {area?.name}
                 {#each showSessions(area?.id) as session}
                   {#if session.title !== ''}
@@ -91,7 +91,7 @@
                       class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
                     >
                       <div
-                        class="flex flex-col md:min-h-[183px] min-h-[150px] w-40"
+                        class="flex flex-col min-h-[183px] w-40"
                         use:style={{ height: sessionLength(session) }}
                       >
                         <h3>{session.title}</h3>
@@ -113,7 +113,7 @@
                     <div
                       class="bg-line-secondary-black border-revup-deep-brand shadow rounded p-6 my-2"
                     >
-                      <div class="flex flex-col md:min-h-[183px] min-h-[150px] w-32 h-40" />
+                      <div class="flex flex-col min-h-[183px] w-32 h-40" />
                     </div>
                   {/if}
                 {/each}
