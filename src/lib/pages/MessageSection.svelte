@@ -10,7 +10,7 @@
   import { START_APPLY, START_PROPOSAL, SHOW_YOUTUBE } from '$lib/feature'
 </script>
 
-<section class="w-full mx-auto px-0 bg-revup-medium-brand py-8 px-3">
+<section class="w-full mx-auto px-0 bg-revup-medium-brand py-8 px-3 z-20">
   <div class="mx-auto">
     {#if SHOW_YOUTUBE}
       <div class="mb-4">
@@ -55,14 +55,15 @@
       {/if}
       {#if START_APPLY}
         <div class="text-center">
-          <a
-            href="https://linedevelopercommunity.connpass.com/event/260460"
-            class="bg-primary-blue p-6 text-white rounded no-underline hover:text-white hover:no-underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            イベント申し込み(connpass)はこちら！
-          </a>
+          <div class="custom-btn">
+            <a
+              href="https://linedevelopercommunity.connpass.com/event/260460"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="block relative"> 参加申し込みはこちら </span>
+            </a>
+          </div>
         </div>
       {/if}
     </div>
