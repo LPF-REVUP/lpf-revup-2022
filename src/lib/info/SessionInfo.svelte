@@ -1,9 +1,10 @@
 <script lang="ts">
   import type { Session } from '../../app'
+  import { START_APPLY } from '$lib/feature'
   export let session: Session
 </script>
 
-<div class="py-16 bg-revup-medium-brand">
+<div class="py-16 bg-revup-medium-brand z-20">
   <div class="container m-auto px-6 md:px-12 xl:px-6">
     <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-1">
       <div class="row-span-2 p-6 rounded-xl text-center sm:p-8">
@@ -33,4 +34,17 @@
       </div>
     </div>
   </div>
+  {#if START_APPLY}
+    <div class="text-center py-8">
+      <div class="custom-btn">
+        <a
+          href="https://linedevelopercommunity.connpass.com/event/260460"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          参加申し込みはこちら
+        </a>
+      </div>
+    </div>
+  {/if}
 </div>
