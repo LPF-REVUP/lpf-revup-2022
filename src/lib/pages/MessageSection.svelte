@@ -7,7 +7,7 @@
     message2,
     videoUrl,
   } from '$lib/utils/constants'
-  import { START_PROPOSAL, SHOW_YOUTUBE } from '$lib/feature'
+  import { START_APPLY, START_PROPOSAL, SHOW_YOUTUBE } from '$lib/feature'
 </script>
 
 <section class="w-full mx-auto px-0 bg-revup-medium-brand py-8 px-3">
@@ -50,6 +50,18 @@
             rel="noopener noreferrer"
           >
             登壇申し込み(CfP)はこちら！
+          </a>
+        </div>
+      {/if}
+      {#if START_APPLY}
+        <div class="text-center">
+          <a
+            href="https://linedevelopercommunity.connpass.com/event/260460"
+            class="bg-primary-blue p-6 text-white rounded no-underline hover:text-white hover:no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            イベント申し込み(connpass)はこちら！
           </a>
         </div>
       {/if}
