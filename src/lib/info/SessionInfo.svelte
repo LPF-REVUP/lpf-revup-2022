@@ -11,7 +11,7 @@
         <div class="h-full flex flex-col justify-center space-y-4">
           <div class="flex flex-wrap items-center justify-center">
             {#each session.speakers as speaker}
-              <a href={`/speaker/${speaker.id}`} class="flex flex-col px-2">
+              <a href={`/speaker/${speaker.id}`} class="flex flex-col px-2 py-4">
                 <img
                   class="w-40 h-40 mx-auto rounded-full"
                   src={speaker.image.url}
