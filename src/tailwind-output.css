@@ -701,23 +701,17 @@ video {
 .h-48 {
   height: 12rem;
 }
-.h-32 {
-  height: 8rem;
-}
 .min-h-\[120px\] {
   min-height: 120px;
 }
 .min-h-\[240px\] {
   min-height: 240px;
 }
-.min-h-\[183px\] {
-  min-height: 183px;
-}
 .min-h-\[140px\] {
   min-height: 140px;
 }
-.min-h-\[160px\] {
-  min-height: 160px;
+.min-h-\[183px\] {
+  min-height: 183px;
 }
 .w-40 {
   width: 10rem;
@@ -749,35 +743,14 @@ video {
 .w-\[64vw\] {
   width: 64vw;
 }
-.w-36 {
-  width: 9rem;
-}
-.w-\[300px\] {
-  width: 300px;
-}
-.w-\[180px\] {
-  width: 180px;
-}
-.w-\[140px\] {
-  width: 140px;
-}
-.w-\[160px\] {
-  width: 160px;
-}
 .w-\[170px\] {
   width: 170px;
 }
+.w-36 {
+  width: 9rem;
+}
 .min-w-\[140px\] {
   min-width: 140px;
-}
-.min-w-\[180px\] {
-  min-width: 180px;
-}
-.min-w-\[240px\] {
-  min-width: 240px;
-}
-.min-w-\[160px\] {
-  min-width: 160px;
 }
 .max-w-\[160px\] {
   max-width: 160px;
@@ -790,15 +763,6 @@ video {
 }
 .max-w-\[800px\] {
   max-width: 800px;
-}
-.max-w-\[180px\] {
-  max-width: 180px;
-}
-.max-w-\[240px\] {
-  max-width: 240px;
-}
-.max-w-\[300px\] {
-  max-width: 300px;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -858,9 +822,6 @@ video {
 }
 .items-center {
   align-items: center;
-}
-.justify-start {
-  justify-content: flex-start;
 }
 .justify-center {
   justify-content: center;
@@ -1283,11 +1244,6 @@ video {
     margin-right: 7rem;
   }
 
-  .md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .md\:-ml-6 {
     margin-left: -1.5rem;
   }
@@ -1318,26 +1274,6 @@ video {
 
   .md\:h-auto {
     height: auto;
-  }
-
-  .md\:h-48 {
-    height: 12rem;
-  }
-
-  .md\:h-32 {
-    height: 8rem;
-  }
-
-  .md\:h-36 {
-    height: 9rem;
-  }
-
-  .md\:h-40 {
-    height: 10rem;
-  }
-
-  .md\:h-52 {
-    height: 13rem;
   }
 
   .md\:h-44 {
@@ -1372,24 +1308,16 @@ video {
     width: auto;
   }
 
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:w-48 {
     width: 12rem;
   }
 
   .md\:w-72 {
     width: 18rem;
-  }
-
-  .md\:w-60 {
-    width: 15rem;
-  }
-
-  .md\:w-32 {
-    width: 8rem;
-  }
-
-  .md\:w-52 {
-    width: 13rem;
   }
 
   .md\:max-w-\[50\%\] {
@@ -1414,10 +1342,6 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
-  }
-
-  .md\:justify-center {
-    justify-content: center;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
