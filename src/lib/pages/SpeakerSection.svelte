@@ -35,7 +35,7 @@
                   </h4>
                   {#if speaker.affiliation !== undefined}
                     <p
-                      class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-2 font-normal"
+                      class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-4 font-normal"
                     >
                       {speaker.affiliation}
                     </p>
