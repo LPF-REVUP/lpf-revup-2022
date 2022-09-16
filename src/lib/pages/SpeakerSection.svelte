@@ -11,16 +11,16 @@
       </div>
       <div class="ml-2 text-lg text-line-primary-black">スピーカー</div>
     </div>
-    <div class="p-1">
+    <div class="p-1 mx-auto">
       <div class="h-full">
-        <div class="mr-2 mb-3 w-full flex flex-wrap gap-px">
+        <div class="mr-2 mb-3 w-full flex flex-wrap justify-center md:justify-start gap-px">
           {#each items as speaker}
-            <div class="px-2 py-4">
+            <div class="px-2 py-4 w-[170px] md:w-52">
               <a href={`/speaker/${speaker.id}`} class="text-white hover:no-underline">
                 <img
                   alt={`${speaker.familyNameEn} ${speaker.firstNameEn} logo`}
                   src={speaker.image.url}
-                  class="md:w-48 w-24 min-w-[140px] object-cover rounded-[50%]"
+                  class="md:w-48 w-24 md:h-44 h-24 min-w-[140px] min-h-[140px] object-cover rounded-[50%]"
                 />
                 <div class="flex flex-col items-center justify-center">
                   <h3
