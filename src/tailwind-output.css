@@ -701,6 +701,9 @@ video {
 .h-48 {
   height: 12rem;
 }
+.h-32 {
+  height: 8rem;
+}
 .min-h-\[120px\] {
   min-height: 120px;
 }
@@ -709,6 +712,12 @@ video {
 }
 .min-h-\[183px\] {
   min-height: 183px;
+}
+.min-h-\[140px\] {
+  min-height: 140px;
+}
+.min-h-\[160px\] {
+  min-height: 160px;
 }
 .w-40 {
   width: 10rem;
@@ -743,8 +752,32 @@ video {
 .w-36 {
   width: 9rem;
 }
+.w-\[300px\] {
+  width: 300px;
+}
+.w-\[180px\] {
+  width: 180px;
+}
+.w-\[140px\] {
+  width: 140px;
+}
+.w-\[160px\] {
+  width: 160px;
+}
+.w-\[170px\] {
+  width: 170px;
+}
 .min-w-\[140px\] {
   min-width: 140px;
+}
+.min-w-\[180px\] {
+  min-width: 180px;
+}
+.min-w-\[240px\] {
+  min-width: 240px;
+}
+.min-w-\[160px\] {
+  min-width: 160px;
 }
 .max-w-\[160px\] {
   max-width: 160px;
@@ -757,6 +790,15 @@ video {
 }
 .max-w-\[800px\] {
   max-width: 800px;
+}
+.max-w-\[180px\] {
+  max-width: 180px;
+}
+.max-w-\[240px\] {
+  max-width: 240px;
+}
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -816,6 +858,9 @@ video {
 }
 .items-center {
   align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
 }
 .justify-center {
   justify-content: center;
@@ -983,6 +1028,10 @@ video {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -990,10 +1039,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 .px-0 {
   padding-left: 0px;
@@ -1238,6 +1283,11 @@ video {
     margin-right: 7rem;
   }
 
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:-ml-6 {
     margin-left: -1.5rem;
   }
@@ -1268,6 +1318,30 @@ video {
 
   .md\:h-auto {
     height: auto;
+  }
+
+  .md\:h-48 {
+    height: 12rem;
+  }
+
+  .md\:h-32 {
+    height: 8rem;
+  }
+
+  .md\:h-36 {
+    height: 9rem;
+  }
+
+  .md\:h-40 {
+    height: 10rem;
+  }
+
+  .md\:h-52 {
+    height: 13rem;
+  }
+
+  .md\:h-44 {
+    height: 11rem;
   }
 
   .md\:w-1\/3 {
@@ -1306,6 +1380,18 @@ video {
     width: 18rem;
   }
 
+  .md\:w-60 {
+    width: 15rem;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
+  }
+
+  .md\:w-52 {
+    width: 13rem;
+  }
+
   .md\:max-w-\[50\%\] {
     max-width: 50%;
   }
@@ -1324,6 +1410,14 @@ video {
 
   .md\:flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
