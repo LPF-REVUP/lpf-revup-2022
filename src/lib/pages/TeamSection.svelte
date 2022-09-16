@@ -13,13 +13,15 @@
     </div>
     <div class="p-1">
       <div class="h-full">
-        <div class="mr-2 mb-3 w-full flex flex-wrap gap-px">
+        <div class="mr-2 mb-3 w-full flex flex-wrap justify-center md:justify-start gap-px">
           {#each items as staff}
-            <div class="px-2 py-4 flex flex-col align-middle items-center justify-center">
+            <div
+              class="px-2 py-4 w-[170px] md:w-52 flex flex-col align-middle items-center justify-center"
+            >
               <img
                 alt={`${staff.name} logo`}
                 src={staff.image}
-                class="md:w-48 w-24 min-w-[140px] object-cover rounded-[50%]"
+                class="md:w-48 w-24 md:h-44 h-24 min-w-[140px] min-h-[140px] object-cover rounded-[50%]"
               />
               <div class="flex flex-col items-center justify-center">
                 <h3
