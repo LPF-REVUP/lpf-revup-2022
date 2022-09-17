@@ -29,7 +29,7 @@
                     {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                   </h3>
                   <h4
-                    class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-8 font-normal"
+                    class="md:text-md text-sm md:text-center max-w-[160px] h-10 leading-8 font-normal"
                   >
                     {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                   </h4>

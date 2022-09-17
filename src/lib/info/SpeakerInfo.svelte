@@ -22,8 +22,8 @@
             class="bg-white lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap md:flex-wrap items-center"
           >
             <div class="w-full lg:w-1/5 lg:border-right lg:border-solid text-center md:text-left">
-              <h3>{`${speaker.familyNameJp} ${speaker.firstNameJp}`}</h3>
-              <p class="mb-0 mt-3 text-grey-dark text-sm italic">
+              <h3 class="h-12 leading-6">{`${speaker.familyNameJp} ${speaker.firstNameJp}`}</h3>
+              <p class="mb-0 mt-3 text-grey-dark text-sm italic h-10 leading-8">
                 {`${speaker.firstNameEn} ${speaker.familyNameEn}`}
               </p>
               <hr class="w-1/4 md:ml-0 mt-4 border lg:hidden" />
