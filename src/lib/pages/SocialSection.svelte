@@ -5,11 +5,11 @@
   import TwitterLogo from '$lib/assets/twitter_logo.svg'
 </script>
 
-<section class="grow basis-auto shrink-0 mx-auto w-[64vw] max-w-full bg-line-main-black bg-white">
+<section class="grow basis-auto shrink-0 mx-auto w-[96vw] max-w-full bg-line-main-black bg-white">
   <div class="py-16 w-full mx-auto relative text-center overflow-hidden">
     <div class="px-3 mx-auto w-full py-8">
       <span
-        class="m-0 absolute t-[60%] l-2/4 md:text-[120px] text-6xl -translate-x-2/4 -translate-y-1/4 text-revup-brand opacity-10 pointer-events-none font-biryani-heading"
+        class="m-0 absolute t-[60%] l-2/4 md:text-[120px] text-8xl -translate-x-2/4 -translate-y-1/4 text-revup-brand opacity-10 pointer-events-none font-biryani-heading"
       >
         SHARE!
       </span>
