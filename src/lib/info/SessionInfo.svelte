@@ -11,17 +11,17 @@
         <div class="h-full flex flex-col justify-center space-y-4">
           <div class="flex flex-wrap items-center justify-center">
             {#each session.speakers as speaker}
-              <a href={`/speaker/${speaker.id}`} class="flex flex-col px-2 py-4">
+              <a href={`/speaker/${speaker.id}`} class="flex flex-col gap-2 px-2 py-4 max-h-72">
                 <img
-                  class="w-40 h-40 mx-auto rounded-full"
+                  class="md:w-40 w-24 md:h-36 h-24 min-w-[140px] min-h-[140px] mx-auto object-cover rounded-full"
                   src={speaker.image.url}
                   alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
                   loading="lazy"
                 />
-                <h6 class="text-lg text-white font-semibold leading-none">
+                <h6 class="text-lg text-white font-semibold h-6 leading-4">
                   {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                 </h6>
-                <span class="text-xs text-white">
+                <span class="text-xs text-white h-4 leading-2">
                   {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                 </span>
                 {#if speaker.affiliation !== undefined}
