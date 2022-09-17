@@ -1132,8 +1132,8 @@ video {
 .leading-8 {
   line-height: 2rem;
 }
-.leading-10 {
-  line-height: 2.5rem;
+.leading-3 {
+  line-height: 0.75rem;
 }
 .text-white {
   --tw-text-opacity: 1;
