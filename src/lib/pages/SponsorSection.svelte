@@ -9,7 +9,7 @@
       <div class="ml-2 text-3xl text-line-primary-black font-bold text-left font-biryani-heading">
         SPONSORS
       </div>
-      <div class="ml-2 text-lg text-line-primary-black">スピーカー</div>
+      <div class="ml-2 text-lg text-line-primary-black">スポンサー</div>
     </div>
     <div class="p-1">
       <div class="h-full">
