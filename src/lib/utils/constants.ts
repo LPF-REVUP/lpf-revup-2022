@@ -24,7 +24,7 @@ export const websiteUrl = 'https://revup.jp/'
 
 export const twitterUserName = 'linedc_jp'
 
-export const videoUrl = 'https://www.youtube.com/watch?v=DxD-Nw4uK3k'
+export const videoUrl = 'https://www.youtube.com/embed/DxD-Nw4uK3k?autoplay=1&mute=1'
 
 export const copyright = '© LINE Developers Community REV UP 2022'
 
