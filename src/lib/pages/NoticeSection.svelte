@@ -5,15 +5,17 @@
 
 <section class="grow basis-auto shrink-0 mx-auto w-full max-w-full bg-revup-light-brand">
   <div class="py-4 w-full mx-auto relative text-center overflow-hidden">
-    <div class="px-3 mx-auto w-full py-8">
+    <ul class="px-3 mx-auto w-full py-8">
       {#each notices as item}
-        <div class="mb-2 flex justify-center align-middle items-center flex-col md:flex-row">
-          <h3 class="text-lg text-line-secondary-black font-bold md:mr-4">
+        <li class="mb-2 flex justify-center align-middle items-center flex-col md:flex-row">
+          <h3 class="md:text-right md:w-40 text-lg text-line-secondary-black font-bold">
             {dayjs(item.date).format('YYYY年MM月DD日')}
           </h3>
-          <p class="text-sm text-line-secondary-black font-normal">{item.title}</p>
-        </div>
+          <p class="text-sm md:w-96 md:pl-4 md:text-left text-line-secondary-black font-normal">
+            {item.title}
+          </p>
+        </li>
       {/each}
-    </div>
+    </ul>
   </div>
 </section>
