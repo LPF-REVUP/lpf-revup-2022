@@ -30,6 +30,10 @@
   />
   <meta name="og:url" content={`${websiteUrl}/speaker/${data.id}`} />
   <meta
+    name="og:image"
+    content={`${websiteUrl}og/RevUp_${data.speaker.familyNameJp}_${data.speaker.firstNameJp}.png`}
+  />
+  <meta
     name="twitter:title"
     content={`${data.speaker.familyNameJp} ${data.speaker.firstNameJp} | ${ogTitle}`}
   />
@@ -40,6 +44,11 @@
   <meta name="twitter:url" content={`${websiteUrl}/speaker/${data.id}`} />
   <meta name="twitter:creator" content={`@${data.speaker.twitter}`} />
   <meta name="twitter:site" content={`A;@${data.speaker.twitter}`} />
+  <meta
+    name="twitter:image"
+    content={`${websiteUrl}og/RevUp_${data.speaker.familyNameJp}_${data.speaker.firstNameJp}.png`}
+  />
+  <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <div class="bg-revup-top">
