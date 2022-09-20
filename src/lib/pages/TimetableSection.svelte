@@ -73,7 +73,7 @@
       </p>
       <div class="mt-12 overflow-x-scroll max-w-[800px] md:max-w-full">
         <div class="flex md:flex-wrap flex-col">
-          <div class="flex flex-wrap flex-nowrap">
+          <div class="flex flex-wrap flex-nowrap justify-center">
             <div class="mt-12">
               {#each hourLabels() as hourLabel}
                 <div class="flex flex-col h-[473px] p-2 m-2 text-white">
@@ -91,7 +91,7 @@
                       class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
                     >
                       <div
-                        class="flex flex-col min-h-[183px] w-40"
+                        class="flex flex-col min-h-[183px] w-48"
                         use:style={{ height: sessionLength(session) }}
                       >
                         <h3>{session.title}</h3>
