@@ -73,7 +73,7 @@
       </p>
       <div class="mt-12 overflow-x-scroll max-w-[800px] md:max-w-full">
         <div class="flex md:flex-wrap flex-col">
-          <div class="flex flex-wrap flex-nowrap justify-center">
+          <div class="flex flex-wrap flex-nowrap">
             <div class="mt-12">
               {#each hourLabels() as hourLabel}
                 <div class="flex flex-col h-[473px] p-2 m-2 text-white">
