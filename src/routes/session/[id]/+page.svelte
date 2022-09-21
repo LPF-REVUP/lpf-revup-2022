@@ -35,9 +35,9 @@
 </svelte:head>
 
 <div class="bg-revup-top">
-  <div class="flex items-center justify-center flex-col h-48">
-    <h1 class="text-white text-4xl">{data.session.title}</h1>
-    <h2 class="text-white text-xl">
+  <div class="flex items-center justify-center flex-col md:w-[48vw] mx-auto h-48">
+    <h1 class="text-white text-lg md:text-4xl">{data.session.title}</h1>
+    <h2 class="text-white text-sm md:text-xl">
       {`${data.session.area.name} / ${filterTime(data.session.startsAt)} - ${filterTime(
         data.session.endsAt,
       )}`}
