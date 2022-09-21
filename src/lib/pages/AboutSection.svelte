@@ -1,3 +1,9 @@
+<script>
+  import LinkPreview from '$lib/info/LinkPreview.svelte'
+  import { SHOW_ARCHIVE } from '$lib/feature'
+  import { archiveInfo } from '$lib/utils/constants'
+</script>
+
 <section id="about" class="w-full bg-revup-medium-brand p-3">
   <div class="pt-20 pb-2.5 md:mx-24">
     <div class="mb-4">
@@ -38,5 +44,10 @@
         <div class="ml-2 md:w-3/5 w-full text-lg text-white">無料</div>
       </div>
     </div>
+    {#if !SHOW_ARCHIVE}
+      <div class="py-4 flex justify-center">
+        <LinkPreview {archiveInfo} />
+      </div>
+    {/if}
   </div>
 </section>

@@ -26,6 +26,17 @@ export const twitterUserName = 'linedc_jp'
 
 export const videoUrl = 'https://www.youtube.com/embed/DxD-Nw4uK3k?autoplay=1&mute=1'
 
+// WIP
+export const archiveInfo = {
+  title:
+    '[イベントレポート]LPF REV UP 2020 LINE開発者コミュニティ初のカンファレンスを開催しました！',
+  description:
+    '2020年11月14日（土）にLINE開発者コミュニティ主催としては初となる技術カンファレンス「LPF REV UP 2020」をオンラインで開催しました！LINEミニアプリ、Botなど各方面でLINEの活用が進む中で注目を集めた本イベントは、合計で約2000名（全セッション合計）もの皆様にお申し込みを頂き、初開催としては大いに盛り上がりました！ご参加いただいた視聴者の皆様、そして講演者・MC・サイト制作・スポンサーなど、本イベントをご支援くださった関係者の皆様すべてに、心から御礼申し上げます。  　ここからは、各会場のMCや運営事務局からのコメントともに、当日のセッションの模様を簡',
+  url: 'https://note.com/linedc/n/nb4131c648cd7',
+  image:
+    'https://assets.st-note.com/production/uploads/images/39545303/rectangle_large_type_2_f5979bbbeaa8f0792821f34671fbad32.png',
+}
+
 export const copyright = '© LINE Developers Community REV UP 2022'
 
 export const developerLinks = [
