@@ -3,8 +3,8 @@
   import { SPEAKER, SPONSOR, TIMETABLE } from '$lib/feature'
   import MainLogo from '$lib/assets/main-picture_invert-logo.svg'
   import GithubLogo from '$lib/assets/github_logo.svg'
-  import GithubMonoLogo from '$lib/assets/github_mono_logo.svg'
   import LoginLogo from '$lib/assets/h__login--hover.svg'
+  import LoginSpLogo from '$lib/assets/h__login--sp.svg'
 
   export let signedStatus
   export let profileName
@@ -29,29 +29,62 @@
     <a href="https://revup.jp" class="flex items-center">
       <img alt="revup 2022 Logo" src={MainLogo} class="w-24" />
     </a>
-    <button
-      data-collapse-toggle="mobile-menu"
-      type="button"
-      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-      on:click={toggleMenu}
-    >
-      <span class="sr-only">Open main menu</span>
-      <svg
-        class="w-6 h-6 text-white"
-        aria-hidden="true"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
+    <div class="flex">
+      <div class="md:hidden flex">
+        <ul class="flex flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <a
+              href="https://github.com/LPF-REVUP/lpf-revup-2022"
+              class="block text-white pr-4 pl-2 text-white md:p-0"
+              target="_blank"
+              rel="noopener"
+            >
+              <img alt="Github Logo" src={GithubLogo} class="w-8" />
+            </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="block text-white pr-2 pl-2 text-white md:hover:bg-transparent md:p-0"
+              on:click={signIn}
+            >
+              {#if !signedStatus}
+                <img alt="Login Logo" src={LoginSpLogo} class="w-9" />
+              {:else}
+                <img
+                  alt={`${profileName} Logo`}
+                  src={profileUrl}
+                  class="w-12 object-cover rounded-[50%]"
+                />
+              {/if}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <button
+        data-collapse-toggle="mobile-menu"
+        type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        on:click={toggleMenu}
       >
-        <path
-          fill-rule="evenodd"
-          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </button>
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6 text-white"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
     {#if isOpen}
       <div class="md:hidden w-full md:block md:w-auto" id="mobile-menu">
         <ul
@@ -109,33 +142,6 @@
               </a>
             </li>
           {/if}
-          <li>
-            <a
-              href="https://github.com/LPF-REVUP/lpf-revup-2022"
-              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
-              target="_blank"
-              rel="noopener"
-            >
-              <img alt="Github Logo" src={GithubMonoLogo} class="w-8" />
-            </a>
-          </li>
-          <li>
-            <button
-              type="button"
-              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
-              on:click={signIn}
-            >
-              {#if !signedStatus}
-                <img alt="Login Logo" src={LoginLogo} class="w-32" />
-              {:else}
-                <img
-                  alt={`${profileName} Logo`}
-                  src={profileUrl}
-                  class="w-12 object-cover rounded-[50%]"
-                />
-              {/if}
-            </button>
-          </li>
         </ul>
       </div>
     {/if}
