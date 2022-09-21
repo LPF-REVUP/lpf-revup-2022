@@ -39,7 +39,7 @@
               target="_blank"
               rel="noopener"
             >
-              <img alt="Github Logo" src={GithubLogo} class="w-8" />
+              <img alt="Github Logo" src={GithubLogo} class="w-9" />
             </a>
           </li>
           <li>
@@ -54,7 +54,7 @@
                 <img
                   alt={`${profileName} Logo`}
                   src={profileUrl}
-                  class="w-12 object-cover rounded-[50%]"
+                  class="w-9 object-cover rounded-[50%]"
                 />
               {/if}
             </button>
