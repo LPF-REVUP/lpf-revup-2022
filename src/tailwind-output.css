@@ -773,6 +773,12 @@ video {
 .w-48 {
   width: 12rem;
 }
+.w-10 {
+  width: 2.5rem;
+}
+.w-9 {
+  width: 2.25rem;
+}
 .min-w-\[120px\] {
   min-width: 120px;
 }
@@ -849,6 +855,9 @@ video {
 }
 .list-none {
   list-style-type: none;
+}
+.flex-row {
+  flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
@@ -1097,6 +1106,15 @@ video {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pr-2 {
+  padding-right: 0.5rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pr-3 {
+  padding-right: 0.75rem;
 }
 .text-left {
   text-align: left;
