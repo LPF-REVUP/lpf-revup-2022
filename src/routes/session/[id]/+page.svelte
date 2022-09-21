@@ -24,19 +24,13 @@
   <meta name="og:description" content={data.session.description} />
   <meta name="og:title" content={`${data.session.title} | ${ogTitle}`} />
   <meta name="og:url" content={`${websiteUrl}/session/${data.session.id}`} />
-  <meta
-    name="og:image"
-    content={`${websiteUrl}og/session/RevUp_${data.session.id}.png`}
-  />
+  <meta name="og:image" content={`${websiteUrl}og/session/RevUp_${data.session.id}.png`} />
   <meta name="twitter:title" content={`${data.session.title} | ${ogTitle}`} />
   <meta name="twitter:description" content={data.session.description} />
   <meta name="twitter:url" content={`${websiteUrl}/session/${data.session.id}`} />
   <meta name="twitter:creator" content={`@${data.session.speakers[0].twitter}`} />
   <meta name="twitter:site" content={`A;@${data.session.speakers[0].twitter}`} />
-  <meta
-    name="twitter:image"
-    content={`${websiteUrl}og/session/RevUp_${data.session.id}.png`}
-  />
+  <meta name="twitter:image" content={`${websiteUrl}og/session/RevUp_${data.session.id}.png`} />
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
