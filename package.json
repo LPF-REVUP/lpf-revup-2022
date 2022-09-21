@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "concurrently \"npm run tailwind:w\" \"vite dev\"",
     "build": "npm run tailwind:build && vite build",
-    "preview": "svelte-kit preview",
+    "preview": "vite preview",
     "tailwind:w": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development postcss src/tailwind.css -o src/tailwind-output.css -w",
     "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/tailwind.css -o src/tailwind-output.css",
     "check": "svelte-check --tsconfig ./tsconfig.json",

@@ -1,0 +1,17 @@
+{
+  "short_name": "lpf-revup-2022-pwa",
+  "name": "lpf-revup-2022-pwa",
+  "description": "LINE Developers Community REV UP 2022 はLINEのコミュニティが主催する国内最大のLINE関連カンファレンスです。各分野のエキスパートがLINE関連の技術や事例、知見について惜しみなく発信する様々なセッションが今年も数多く行われます。",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }
+  ],
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#03A678",
+  "theme_color": "#03A678"
+}
