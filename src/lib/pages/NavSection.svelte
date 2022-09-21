@@ -3,6 +3,7 @@
   import { SPEAKER, SPONSOR, TIMETABLE } from '$lib/feature'
   import MainLogo from '$lib/assets/main-picture_invert-logo.svg'
   import GithubLogo from '$lib/assets/github_logo.svg'
+  import GithubMonoLogo from '$lib/assets/github_mono_logo.svg'
   import LoginLogo from '$lib/assets/h__login--hover.svg'
 
   export let signedStatus
@@ -108,6 +109,33 @@
               </a>
             </li>
           {/if}
+          <li>
+            <a
+              href="https://github.com/LPF-REVUP/lpf-revup-2022"
+              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
+              target="_blank"
+              rel="noopener"
+            >
+              <img alt="Github Logo" src={GithubMonoLogo} class="w-8" />
+            </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
+              on:click={signIn}
+            >
+              {#if !signedStatus}
+                <img alt="Login Logo" src={LoginLogo} class="w-32" />
+              {:else}
+                <img
+                  alt={`${profileName} Logo`}
+                  src={profileUrl}
+                  class="w-12 object-cover rounded-[50%]"
+                />
+              {/if}
+            </button>
+          </li>
         </ul>
       </div>
     {/if}
