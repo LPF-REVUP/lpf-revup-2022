@@ -4,8 +4,10 @@
   dayjs.extend(duration)
   import SessionInfo from '$lib/info/SessionInfo.svelte'
   import SocialSection from '$lib/pages/SocialSection.svelte'
+  import LinkPreview from '$lib/info/LinkPreview.svelte'
 
   import { ogTitle, websiteUrl } from '$lib/utils/constants'
+  import { SHOW_ARCHIVE } from '$lib/feature'
   import type { Session } from '../../../app'
 
   export let data: { id: string; session: Session }
@@ -46,4 +48,23 @@
 </div>
 
 <SessionInfo session={data.session} />
+{#if SHOW_ARCHIVE && data.session.movieUrl}
+  <div class="py-4 flex justify-center">
+    <div class="flex justify-center items-center">
+      <iframe src={data.session.movieUrl} title={data.session.title} width="900" height="600" />
+    </div>
+  </div>
+{/if}
+{#if SHOW_ARCHIVE && data.session.documentUrl}
+  <div class="py-4 flex justify-center">
+    <LinkPreview
+      archiveInfo={{
+        title: data.session.title,
+        description: '',
+        url: data.session.documentUrl,
+        image: '',
+      }}
+    />
+  </div>
+{/if}
 <SocialSection />

@@ -515,6 +515,21 @@ video {
 .relative {
   position: relative;
 }
+.bottom-\[20px\] {
+  bottom: 20px;
+}
+.right-0 {
+  right: 0px;
+}
+.right-\[4px\] {
+  right: 4px;
+}
+.bottom-\[12px\] {
+  bottom: 12px;
+}
+.right-\[2px\] {
+  right: 2px;
+}
 .z-20 {
   z-index: 20;
 }
@@ -820,6 +835,9 @@ video {
 }
 .items-center {
   align-items: center;
+}
+.justify-end {
+  justify-content: flex-end;
 }
 .justify-center {
   justify-content: center;
