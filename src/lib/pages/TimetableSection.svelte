@@ -1,6 +1,9 @@
 <script lang="ts">
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
+  import { SHOW_ARCHIVE } from '$lib/feature'
+  import VideoLogo from '$lib/assets/video_logo.svg'
+  import ClipLogo from '$lib/assets/clip_logo.svg'
   import style from '$lib/services/style.service'
   import type { Session } from '../../app'
   dayjs.extend(duration)
@@ -91,22 +94,44 @@
                       class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
                     >
                       <div
-                        class="flex flex-col min-h-[183px] w-48"
+                        class="flex flex-col justify-between min-h-[183px] w-48"
                         use:style={{ height: sessionLength(session) }}
                       >
-                        <h3>{session.title}</h3>
-                        {#each session.speakers as speaker}
-                          <div class="flex items-center mb-4">
-                            <img
-                              alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
-                              src={speaker.image.url}
-                              class="w-6 object-cover rounded-[50%]"
-                            />
-                            <div class="flex flex-col text-sm ml-2">
-                              {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                        <div>
+                          <h3>{session.title}</h3>
+                          {#each session.speakers as speaker}
+                            <div class="flex items-center mb-4">
+                              <img
+                                alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
+                                src={speaker.image.url}
+                                class="w-6 object-cover rounded-[50%]"
+                              />
+                              <div class="flex flex-col text-sm ml-2">
+                                {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                              </div>
                             </div>
+                          {/each}
+                        </div>
+                        <div class="relative">
+                          <div
+                            class="flex justify-end mt-4 absolute right-[2px] bottom-[12px] z-20"
+                          >
+                            {#if SHOW_ARCHIVE && session.movieUrl}
+                              <a href={session.movieUrl} target="_blank" rel="noopener noreferrer">
+                                <img alt="Video" src={VideoLogo} class="w-9 px-2 z-20" />
+                              </a>
+                            {/if}
+                            {#if SHOW_ARCHIVE && session.documentUrl}
+                              <a
+                                href={session.documentUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <img alt="Document" src={ClipLogo} class="w-9 px-2 z-20" />
+                              </a>
+                            {/if}
                           </div>
-                        {/each}
+                        </div>
                       </div>
                     </a>
                   {:else}
