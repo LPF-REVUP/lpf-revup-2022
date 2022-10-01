@@ -10,7 +10,8 @@
   import TeamSection from '$lib/pages/TeamSection.svelte'
   import ProfileSection from '$lib/pages/ProfileSection.svelte'
 
-  import { SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
+  import { SHUFFLE_SPEAKER, SPEAKER, SPONSOR, TEAM, TIMETABLE } from '$lib/feature'
+  import { shuffleArray } from '$lib/services/collection.service'
   import { staffs } from '$lib/utils/team.constants'
   import { ogDescription, ogTitle, twitterUserName, websiteUrl } from '$lib/utils/constants'
   import type { MicroCMSEndpoint } from '../app'
@@ -48,7 +49,9 @@
   <TimetableSection items={data.sessions.contents} />
 {/if}
 {#if SPEAKER && data.speakers.totalCount !== 0}
-  <SpeakerSection items={data.speakers.contents} />
+  <SpeakerSection
+    items={SHUFFLE_SPEAKER ? shuffleArray(data.speakers.contents) : data.speakers.contents}
+  />
 {/if}
 {#if SPONSOR && data.sponsors.totalCount !== 0}
   <SponsorSection items={data.sponsors.contents} />
