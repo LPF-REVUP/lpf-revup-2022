@@ -24,12 +24,12 @@
                 />
                 <div class="flex flex-col items-center justify-center">
                   <h3
-                    class="md:text-lg text-md md:text-center max-w-[160px] h-12 leading-6 font-bold"
+                    class="md:text-lg text-md md:text-center max-w-[160px] h-12 leading-8 font-bold"
                   >
                     {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                   </h3>
                   <h4
-                    class="md:text-md text-sm md:text-center max-w-[160px] h-10 leading-3 font-normal"
+                    class="md:text-md text-sm md:text-center max-w-[160px] h-10 leading-4 font-normal"
                   >
                     {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                   </h4>

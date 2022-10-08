@@ -5,13 +5,6 @@
 :root {
   font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
     'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  --primary-color: #03a678;
-  --secondary-color: #dbe7f1;
-  --accent-color: #c00;
-  --heading-color: rgba(0, 0, 0, 0.7);
-  --text-color: #333;
-  --column-width: 42rem;
-  --column-margin-top: 4rem;
 }
 
 body {
@@ -39,35 +32,6 @@ body::before {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-h1,
-h2,
-p {
-  font-weight: 400;
-}
-
-p {
-  line-height: 1.5;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1rem;
 }
 
 @keyframes anime {
@@ -134,14 +98,6 @@ h2 {
 }
 
 @media (min-width: 720px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
   .custom-btn {
     width: 70%;
   }
