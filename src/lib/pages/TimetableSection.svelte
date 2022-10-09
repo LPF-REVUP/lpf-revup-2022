@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { match } from 'ts-pattern'
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
   import { SHOW_ARCHIVE } from '$lib/feature'
   import VideoLogo from '$lib/assets/video_logo.svg'
   import ClipLogo from '$lib/assets/clip_logo.svg'
   import style from '$lib/services/style.service'
-  import type { Session } from '../../app'
+  import type { AreaId, Session } from '../../app'
   dayjs.extend(duration)
   export let items: Session[]
   $: hourLabels = () => {
@@ -27,6 +28,15 @@
   const sessionLength = (session: Session) => {
     const hours = dayjs.duration(dayjs(session.endsAt).diff(session.startsAt)).asHours()
     return `${hours * 425 + (hours / 0.5 - 1) * 8 * 4}px`
+  }
+  const sessionBackgroundColor = (area: AreaId, isOpacity?: boolean) => {
+    return match<unknown, string>(area)
+      .with('biz', () => (isOpacity ? 'rgba(2, 72, 115, 0.8)' : '#024873'))
+      .with('tech', () => (isOpacity ? 'rgba(2, 89, 48, 0.8)' : '#025930'))
+      .with('hands', () => (isOpacity ? 'rgba(11, 35, 55, 0.8)' : '#0B2337'))
+      .with('pioneer', () => (isOpacity ? 'rgba(79, 39, 2, 0.8)' : '#4f2702'))
+      .with('collabo', () => (isOpacity ? 'rgba(139, 12, 225, 0.8)' : '#8B0CE1'))
+      .exhaustive()
   }
   const showSessions = (areaId: string) => {
     const sortedSessions = items
@@ -74,10 +84,10 @@
       <p class="mt-8 mb-4 text-white">
         今年は各セッション毎の申し込みは不要です。上部のボタンよりお申し込み下さい。視聴URL、資料等はConnpassで共有いたします。
       </p>
-      <div class="mt-28 overflow-x-scroll max-w-[800px] md:max-w-full">
+      <div class="mt-44 overflow-x-scroll max-w-[800px] md:max-w-full">
         <div class="flex md:flex-wrap flex-col">
           <div class="flex flex-wrap flex-nowrap">
-            <div class="mt-28">
+            <div class="mt-44">
               {#each hourLabels() as hourLabel}
                 <div class="flex flex-col h-[473px] p-2 m-2 text-white">
                   {hourLabel}
@@ -86,17 +96,31 @@
             </div>
             {#each areas as area}
               <div class="flex md:flex-wrap flex-col p-2 text-white">
-                <div class="flex items-center justify-center min-h-[93px] w-50">
+                <div
+                  class="flex items-center justify-center min-h-[93px] w-50"
+                  use:style={{
+                    'background-color': sessionBackgroundColor(area?.id),
+                  }}
+                >
                   <h2 class="font-bold">
                     {area?.name}
                   </h2>
                 </div>
+                <div
+                  class="w-0 h-0 border border-t-[36px] border-x-[105px]"
+                  use:style={{
+                    'border-color': `${sessionBackgroundColor(area?.id)} transparent transparent`,
+                  }}
+                />
                 {#each showSessions(area?.id) as session}
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
                       title={session.title}
-                      class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
+                      class="text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
+                      use:style={{
+                        'background-color': sessionBackgroundColor(session.area.id, true),
+                      }}
                     >
                       <div
                         class="flex flex-col justify-between min-h-[183px] w-48"
