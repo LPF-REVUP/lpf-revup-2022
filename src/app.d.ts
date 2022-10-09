@@ -30,8 +30,10 @@ interface Image {
   url: string
 }
 
+export type AreaId = 'biz' | 'tech' | 'hands' | 'pioneer' | 'collabo'
+
 interface Area {
-  id: string
+  id: AreaId
   name: string
 }
 
