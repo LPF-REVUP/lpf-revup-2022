@@ -16,7 +16,11 @@
         <div class="mr-2 mb-3 w-full flex flex-wrap justify-center md:justify-start gap-px">
           {#each items as speaker}
             <div class="px-2 py-4 w-[170px] md:w-52">
-              <a href={`/speaker/${speaker.id}`} class="text-white hover:no-underline">
+              <a
+                href={`/speaker/${speaker.id}`}
+                title={`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                class="text-white hover:no-underline hover:transition-none hover:filter-none"
+              >
                 <img
                   alt={`${speaker.familyNameEn} ${speaker.firstNameEn} logo`}
                   src={speaker.image.url}

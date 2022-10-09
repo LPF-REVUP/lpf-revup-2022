@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { match } from 'ts-pattern'
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
   import { SHOW_ARCHIVE } from '$lib/feature'
   import VideoLogo from '$lib/assets/video_logo.svg'
   import ClipLogo from '$lib/assets/clip_logo.svg'
   import style from '$lib/services/style.service'
-  import type { Session } from '../../app'
+  import type { AreaId, Session } from '../../app'
   dayjs.extend(duration)
   export let items: Session[]
   $: hourLabels = () => {
@@ -27,6 +28,15 @@
   const sessionLength = (session: Session) => {
     const hours = dayjs.duration(dayjs(session.endsAt).diff(session.startsAt)).asHours()
     return `${hours * 425 + (hours / 0.5 - 1) * 8 * 4}px`
+  }
+  const sessionBackgroundColor = (area: AreaId) => {
+    return match<unknown, string>(area)
+      .with('biz', () => '#024873')
+      .with('tech', () => '#025930')
+      .with('hands', () => '#0B2337')
+      .with('pioneer', () => '#8F4801')
+      .with('collabo', () => '#e53A20')
+      .exhaustive()
   }
   const showSessions = (areaId: string) => {
     const sortedSessions = items
@@ -74,10 +84,10 @@
       <p class="mt-8 mb-4 text-white">
         今年は各セッション毎の申し込みは不要です。上部のボタンよりお申し込み下さい。視聴URL、資料等はConnpassで共有いたします。
       </p>
-      <div class="mt-12 overflow-x-scroll max-w-[800px] md:max-w-full">
+      <div class="mt-28 overflow-x-scroll max-w-[800px] md:max-w-full">
         <div class="flex md:flex-wrap flex-col">
           <div class="flex flex-wrap flex-nowrap">
-            <div class="mt-12">
+            <div class="mt-28">
               {#each hourLabels() as hourLabel}
                 <div class="flex flex-col h-[473px] p-2 m-2 text-white">
                   {hourLabel}
@@ -86,31 +96,42 @@
             </div>
             {#each areas as area}
               <div class="flex md:flex-wrap flex-col p-2 text-white">
-                {area?.name}
+                <div
+                  class="flex items-center justify-center min-h-[93px] w-50"
+                  use:style={{ 'background-color': sessionBackgroundColor(area?.id) }}
+                >
+                  <h2 class="font-bold">
+                    {area?.name}
+                  </h2>
+                </div>
                 {#each showSessions(area?.id) as session}
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
-                      class="bg-primary-blue text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
+                      title={session.title}
+                      class="text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
+                      use:style={{ 'background-color': sessionBackgroundColor(session.area.id) }}
                     >
                       <div
                         class="flex flex-col justify-between min-h-[183px] w-48"
                         use:style={{ height: sessionLength(session) }}
                       >
-                        <div>
+                        <div class="flex justify-between flex-col">
                           <h3>{session.title}</h3>
-                          {#each session.speakers as speaker}
-                            <div class="flex items-center mb-4">
-                              <img
-                                alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
-                                src={speaker.image.url}
-                                class="w-6 object-cover rounded-[50%]"
-                              />
-                              <div class="flex flex-col text-sm ml-2">
-                                {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                          <div class="flex flex-col justify-end">
+                            {#each session.speakers as speaker}
+                              <div class="flex items-center mb-2">
+                                <img
+                                  alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
+                                  src={speaker.image.url}
+                                  class="w-6 h-6 object-cover rounded-[50%]"
+                                />
+                                <div class="flex flex-col text-sm ml-2">
+                                  {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                                </div>
                               </div>
-                            </div>
-                          {/each}
+                            {/each}
+                          </div>
                         </div>
                         <div class="relative">
                           <div
