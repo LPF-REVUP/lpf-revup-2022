@@ -16,7 +16,13 @@
         <div class="mr-2 mb-3 w-full flex flex-wrap gap-px">
           {#each items as sponsor}
             <div class="px-2 py-4">
-              <a href={sponsor.link} target="_blank" rel="noopener">
+              <a
+                href={sponsor.link}
+                title={sponsor.name}
+                target="_blank"
+                rel="noopener"
+                class="hover:no-underline hover:transition-none hover:filter-none"
+              >
                 <img alt={`${sponsor.name} logo`} src={sponsor.image.url} class="md:w-72 w-36" />
                 <div class="flex flex-col items-center justify-center">
                   <h3

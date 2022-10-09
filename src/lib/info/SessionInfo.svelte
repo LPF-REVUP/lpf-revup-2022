@@ -26,14 +26,14 @@
                 </span>
                 {#if speaker.affiliation !== undefined}
                   <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[240px] h-8 leading-2 font-normal"
+                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 h-8 leading-2 font-normal"
                   >
                     {speaker.affiliation}
                   </p>
                 {/if}
                 {#if speaker.title !== undefined}
                   <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[240px] h-8 leading-2 font-normal"
+                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 h-8 leading-2 font-normal"
                   >
                     {speaker.title}
                   </p>

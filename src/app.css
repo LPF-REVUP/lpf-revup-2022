@@ -28,6 +28,15 @@ body::before {
   opacity: 0.05;
 }
 
+a:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 #svelte {
   min-height: 100vh;
   display: flex;

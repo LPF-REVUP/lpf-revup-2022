@@ -515,20 +515,11 @@ video {
 .relative {
   position: relative;
 }
-.bottom-\[20px\] {
-  bottom: 20px;
-}
-.right-0 {
-  right: 0px;
-}
-.right-\[4px\] {
-  right: 4px;
+.right-\[2px\] {
+  right: 2px;
 }
 .bottom-\[12px\] {
   bottom: 12px;
-}
-.right-\[2px\] {
-  right: 2px;
 }
 .z-20 {
   z-index: 20;
@@ -621,8 +612,8 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
-.mt-12 {
-  margin-top: 3rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 .block {
   display: block;
@@ -702,6 +693,9 @@ video {
 .min-h-\[240px\] {
   min-height: 240px;
 }
+.min-h-\[93px\] {
+  min-height: 93px;
+}
 .min-h-\[183px\] {
   min-height: 183px;
 }
@@ -713,6 +707,9 @@ video {
 }
 .w-24 {
   width: 6rem;
+}
+.w-40 {
+  width: 10rem;
 }
 .w-12 {
   width: 3rem;
@@ -759,8 +756,8 @@ video {
 .max-w-\[120px\] {
   max-width: 120px;
 }
-.max-w-\[240px\] {
-  max-width: 240px;
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 .max-w-full {
   max-width: 100%;
@@ -1156,9 +1153,6 @@ video {
 .leading-8 {
   line-height: 2rem;
 }
-.leading-3 {
-  line-height: 0.75rem;
-}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1249,6 +1243,12 @@ video {
 }
 .hover\:no-underline:hover {
   text-decoration-line: none;
+}
+.hover\:filter-none:hover {
+  filter: none;
+}
+.hover\:transition-none:hover {
+  transition-property: none;
 }
 @media (prefers-color-scheme: dark) {
   .dark\:text-white {
