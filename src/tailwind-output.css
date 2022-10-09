@@ -645,15 +645,6 @@ video {
 .h-24 {
   height: 6rem;
 }
-.h-6 {
-  height: 1.5rem;
-}
-.h-4 {
-  height: 1rem;
-}
-.h-8 {
-  height: 2rem;
-}
 .h-96 {
   height: 24rem;
 }
@@ -665,6 +656,12 @@ video {
 }
 .h-14 {
   height: 3.5rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
+.h-8 {
+  height: 2rem;
 }
 .h-\[473px\] {
   height: 473px;
@@ -841,6 +838,9 @@ video {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 .gap-8 {
   gap: 2rem;
@@ -1147,11 +1147,11 @@ video {
 .leading-6 {
   line-height: 1.5rem;
 }
-.leading-4 {
-  line-height: 1rem;
-}
 .leading-8 {
   line-height: 2rem;
+}
+.leading-4 {
+  line-height: 1rem;
 }
 .text-white {
   --tw-text-opacity: 1;

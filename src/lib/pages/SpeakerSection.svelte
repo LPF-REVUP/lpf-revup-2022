@@ -27,27 +27,19 @@
                   class="md:w-48 w-24 md:h-44 h-24 min-w-[140px] min-h-[140px] object-cover rounded-[50%]"
                 />
                 <div class="flex flex-col items-center justify-center">
-                  <h3
-                    class="md:text-lg text-md md:text-center max-w-[160px] h-12 leading-8 font-bold"
-                  >
+                  <h3 class="md:text-lg text-md text-center max-w-[160px] font-bold">
                     {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                   </h3>
-                  <h4
-                    class="md:text-md text-sm md:text-center max-w-[160px] h-10 leading-4 font-normal"
-                  >
+                  <h4 class="md:text-md text-sm text-center max-w-[160px] font-normal">
                     {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                   </h4>
                   {#if speaker.affiliation !== undefined}
-                    <p
-                      class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-4 font-normal"
-                    >
+                    <p class="md:text-md text-sm text-center max-w-[160px] font-normal">
                       {speaker.affiliation}
                     </p>
                   {/if}
                   {#if speaker.title !== undefined}
-                    <p
-                      class="md:text-md text-sm md:text-center max-w-[160px] h-8 leading-2 font-normal"
-                    >
+                    <p class="md:text-md text-sm text-center max-w-[160px] font-normal">
                       {speaker.title}
                     </p>
                   {/if}

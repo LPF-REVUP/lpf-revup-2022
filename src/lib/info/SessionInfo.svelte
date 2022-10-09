@@ -18,23 +18,19 @@
                   alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
                   loading="lazy"
                 />
-                <h6 class="text-lg text-white font-semibold h-6 leading-4">
+                <h6 class="text-lg text-white font-semibold">
                   {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                 </h6>
-                <span class="text-xs text-white h-4 leading-2">
+                <span class="text-xs text-white">
                   {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
                 </span>
                 {#if speaker.affiliation !== undefined}
-                  <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 h-8 leading-2 font-normal"
-                  >
+                  <p class="md:text-md text-sm text-white text-center font-normal">
                     {speaker.affiliation}
                   </p>
                 {/if}
                 {#if speaker.title !== undefined}
-                  <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 h-8 leading-2 font-normal"
-                  >
+                  <p class="md:text-md text-sm text-white text-center font-normal">
                     {speaker.title}
                   </p>
                 {/if}

@@ -102,7 +102,7 @@
                         class="flex flex-col justify-between min-h-[183px] w-48"
                         use:style={{ height: sessionLength(session) }}
                       >
-                        <div class="flex justify-between flex-col">
+                        <div class="flex justify-around flex-col gap-2">
                           <h3>{session.title}</h3>
                           <div class="flex flex-col justify-end">
                             {#each session.speakers as speaker}
