@@ -61,6 +61,7 @@
           href="https://linedevelopercommunity.connpass.com/event/260460"
           target="_blank"
           rel="noopener noreferrer"
+          class="hover:transition-none hover:filter-none"
         >
           参加申し込みはこちら
         </a>
