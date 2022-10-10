@@ -5,6 +5,7 @@
   "author": "jiyuujin <jiyuujinunite@gmail.com>",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "dev": "concurrently \"npm run tailwind:w\" \"vite dev\"",
     "build": "npm run tailwind:build && vite build",
     "preview": "vite preview",
