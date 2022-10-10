@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Session } from '../../app'
+  import AvatarInfo from '$lib/info/AvatarInfo.svelte'
   import { START_APPLY } from '$lib/feature'
   export let session: Session
 </script>
@@ -16,32 +17,33 @@
                 title={`${speaker.familyNameJp} ${speaker.firstNameJp}`}
                 class="flex flex-col gap-2 px-2 py-4 max-h-72 hover:no-underline hover:transition-none hover:filter-none"
               >
-                <img
-                  class="md:w-40 w-24 md:h-36 h-24 min-w-[140px] min-h-[140px] mx-auto object-cover rounded-full"
-                  src={speaker.image.url}
+                <AvatarInfo
                   alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
-                  loading="lazy"
-                />
-                <h6 class="text-lg text-white font-semibold">
-                  {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
-                </h6>
-                <span class="text-xs text-white">
-                  {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
-                </span>
-                {#if speaker.affiliation !== undefined}
-                  <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 font-normal"
-                  >
-                    {speaker.affiliation}
-                  </p>
-                {/if}
-                {#if speaker.title !== undefined}
-                  <p
-                    class="md:text-md text-sm text-white md:text-center max-w-[200px] w-40 font-normal"
-                  >
-                    {speaker.title}
-                  </p>
-                {/if}
+                  src={speaker.image.url}
+                >
+                  <div class="flex flex-col text-sm ml-2">
+                    <h6 class="text-lg text-white font-semibold">
+                      {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
+                    </h6>
+                    <span class="text-xs text-white">
+                      {`${speaker.familyNameEn} ${speaker.firstNameEn}`}
+                    </span>
+                    {#if speaker.affiliation !== undefined}
+                      <p
+                        class="md:text-md text-sm text-white md:text-center max-w-[200px] w-full font-normal"
+                      >
+                        {speaker.affiliation}
+                      </p>
+                    {/if}
+                    {#if speaker.title !== undefined}
+                      <p
+                        class="md:text-md text-sm text-white md:text-center max-w-[200px] w-full font-normal"
+                      >
+                        {speaker.title}
+                      </p>
+                    {/if}
+                  </div>
+                </AvatarInfo>
               </a>
             {/each}
           </div>
