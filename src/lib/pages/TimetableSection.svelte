@@ -2,6 +2,7 @@
   import { match } from 'ts-pattern'
   import dayjs from 'dayjs'
   import duration from 'dayjs/plugin/duration.js'
+  import AvatarInfo from '$lib/info/AvatarInfo.svelte'
   import { SHOW_ARCHIVE } from '$lib/feature'
   import VideoLogo from '$lib/assets/video_logo.svg'
   import ClipLogo from '$lib/assets/clip_logo.svg'
@@ -130,15 +131,15 @@
                           <h3>{session.title}</h3>
                           <div class="flex flex-col justify-end">
                             {#each session.speakers as speaker}
-                              <div class="flex items-center mb-2">
-                                <img
+                              <div class="mb-2">
+                                <AvatarInfo
                                   alt={`${speaker.familyNameJp} ${speaker.firstNameJp} Logo`}
                                   src={speaker.image.url}
-                                  class="w-6 h-6 object-cover rounded-[50%]"
-                                />
-                                <div class="flex flex-col text-sm ml-2">
+                                  isMini={true}
+                                  isHorizontal={true}
+                                >
                                   {`${speaker.familyNameJp} ${speaker.firstNameJp}`}
-                                </div>
+                                </AvatarInfo>
                               </div>
                             {/each}
                           </div>

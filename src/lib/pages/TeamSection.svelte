@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Staff } from '../../app'
+  import AvatarInfo from '$lib/info/AvatarInfo.svelte'
   export let items: Staff[]
 </script>
 
@@ -18,12 +19,7 @@
             <div
               class="px-2 py-4 w-[170px] md:w-52 flex flex-col align-middle items-center justify-center"
             >
-              <img
-                alt={`${staff.name} logo`}
-                src={staff.image}
-                class="md:w-48 w-24 md:h-44 h-24 min-w-[140px] min-h-[140px] object-cover rounded-[50%]"
-              />
-              <div class="flex flex-col items-center justify-center">
+              <AvatarInfo alt={`${staff.name} logo`} src={staff.image}>
                 <h3
                   class="md:text-lg text-md md:text-center max-w-[140px] h-6 leading-6 text-white font-bold"
                 >
@@ -39,7 +35,7 @@
                 >
                   {`${staff.description}`}
                 </p>
-              </div>
+              </AvatarInfo>
             </div>
           {/each}
         </div>
