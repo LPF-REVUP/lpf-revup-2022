@@ -21,17 +21,17 @@
             >
               <AvatarInfo alt={`${staff.name} logo`} src={staff.image}>
                 <h3
-                  class="md:text-lg text-md md:text-center max-w-[140px] h-6 leading-6 text-white font-bold"
+                  class="md:text-lg text-md md:text-center max-w-[140px] h-6 text-white font-bold"
                 >
                   {`${staff.name}`}
                 </h3>
                 <h4
-                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 leading-4 text-white font-normal"
+                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 text-white font-normal"
                 >
                   {`${staff.company}`}
                 </h4>
                 <p
-                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 leading-2 text-white font-normal"
+                  class="md:text-md text-sm md:text-center max-w-[160px] h-6 text-white font-normal"
                 >
                   {`${staff.description}`}
                 </p>
