@@ -36,7 +36,7 @@
             <div
               class="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 min-h-[240px] flex items-center justify-center text-center md:text-left"
             >
-              <a href={`https://twitter.com/${speaker.twitter}`} target="_blank" rel="noopener">
+              <a href={`https://twitter.com/${speaker.twitter}`} target="_blank" rel="noreferrer">
                 <img alt="Twitter logo" src={TwitterLogo} class="w-12 px-2" />
               </a>
             </div>

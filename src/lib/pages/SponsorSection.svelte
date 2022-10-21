@@ -20,7 +20,7 @@
                 href={sponsor.link}
                 title={sponsor.name}
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 class="hover:no-underline hover:transition-none hover:filter-none"
               >
                 <img alt={`${sponsor.name} logo`} src={sponsor.image.url} class="md:w-72 w-36" />

@@ -37,7 +37,7 @@
               href="https://github.com/LPF-REVUP/lpf-revup-2022"
               class="block text-white pr-4 pl-2 text-white md:p-0"
               target="_blank"
-              rel="noopener"
+              rel="noreferrer"
             >
               <img alt="Github Logo" src={GithubLogo} class="w-9" />
             </a>
@@ -190,7 +190,7 @@
             href="https://github.com/LPF-REVUP/lpf-revup-2022"
             class="block text-white py-2 pr-4 pl-3 text-white border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             <img alt="Github Logo" src={GithubLogo} class="w-8" />
           </a>
