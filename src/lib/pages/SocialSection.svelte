@@ -15,7 +15,7 @@
       </span>
       <div class="flex items-center justify-center align-middle">
         {#each socialLinks as link}
-          <a href={link.url} class="cursor-pointer" target="_blank" rel="noopener">
+          <a href={link.url} class="cursor-pointer" target="_blank" rel="noreferrer">
             {#if link.value === 'facebook'}
               <img alt={`${link.text} Logo`} src={FacebookLogo} class="w-12 px-2" />
             {/if}

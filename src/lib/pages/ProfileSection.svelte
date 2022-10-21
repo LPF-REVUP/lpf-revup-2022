@@ -26,7 +26,7 @@
         href={link.url}
         class="p-2 rounded-md text-line-secondary-black hover:text-revup-light-brand"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
       >
         {#if link.value === 'github'}
           <img alt={`${link.text} Logo`} src={GithubLogo} class="w-8 px-1" />
