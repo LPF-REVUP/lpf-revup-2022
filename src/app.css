@@ -63,8 +63,9 @@ a:hover {
   position: relative;
   padding: 2px 8px;
   margin: 0 auto;
+  width: 60vw;
   transition: 0.2s;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 .custom-btn:before,
@@ -106,8 +107,9 @@ a:hover {
   font-family: sans-serif;
 }
 
-@media (min-width: 720px) {
+@media (max-width: 600px) {
   .custom-btn {
-    width: 70%;
+    width: 320px;
+    font-size: 1.08rem;
   }
 }

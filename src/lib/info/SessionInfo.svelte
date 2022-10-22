@@ -8,7 +8,7 @@
 <div class="py-16 bg-revup-medium-brand z-20">
   <div class="container m-auto px-6 md:px-12 xl:px-6">
     <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-1">
-      <div class="row-span-2 p-6 rounded-xl text-center sm:p-8">
+      <div class="row-span-2 p-6 rounded-lg border text-center sm:p-8">
         <div class="h-full flex flex-col justify-center space-y-4 gap-8">
           <div class="flex flex-wrap items-center justify-center">
             {#each session.speakers as speaker}
@@ -47,9 +47,11 @@
               </a>
             {/each}
           </div>
-          <p class="text-white md:text-xl md:px-24 px-2">
-            {@html session.description}
-          </p>
+          <div class="flex justify-center">
+            <p class="p-4 text-white md:text-xl md:px-24 w-[80vw] md:w-[48] px-2">
+              {@html session.description}
+            </p>
+          </div>
         </div>
       </div>
     </div>
