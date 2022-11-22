@@ -35,6 +35,7 @@ export const archiveInfo = {
   url: 'https://note.com/linedc/n/nb4131c648cd7',
   image:
     'https://assets.st-note.com/production/uploads/images/39545303/rectangle_large_type_2_f5979bbbeaa8f0792821f34671fbad32.png',
+  wip: true,
 }
 
 export const copyright = '© LINE Developers Community REV UP 2022'
