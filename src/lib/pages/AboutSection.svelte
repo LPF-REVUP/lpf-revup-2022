@@ -44,7 +44,7 @@
         <div class="ml-2 md:w-3/5 w-full text-lg text-white">無料</div>
       </div>
     </div>
-    {#if SHOW_ARCHIVE}
+    {#if SHOW_ARCHIVE && !archiveInfo.wip}
       <div class="py-4 flex justify-center">
         <LinkPreview {archiveInfo} />
       </div>
