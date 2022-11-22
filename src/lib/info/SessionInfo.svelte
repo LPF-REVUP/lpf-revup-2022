@@ -1,7 +1,8 @@
 <script lang="ts">
   import type { Session } from '../../app'
   import AvatarInfo from '$lib/info/AvatarInfo.svelte'
-  import { START_APPLY } from '$lib/feature'
+  import LinkPreview from '$lib/info/LinkPreview.svelte'
+  import { START_APPLY, SHOW_ARCHIVE } from '$lib/feature'
   export let session: Session
 </script>
 
@@ -56,6 +57,25 @@
       </div>
     </div>
   </div>
+  {#if SHOW_ARCHIVE && session.movieUrl}
+    <div class="py-4 flex justify-center">
+      <div class="flex justify-center items-center">
+        <iframe src={session.movieUrl} title={session.title} width="900" height="600" />
+      </div>
+    </div>
+  {/if}
+  {#if SHOW_ARCHIVE && session.documentUrl}
+    <div class="py-4 flex justify-center">
+      <LinkPreview
+        archiveInfo={{
+          title: session.title,
+          description: '',
+          url: session.documentUrl,
+          image: '',
+        }}
+      />
+    </div>
+  {/if}
   {#if START_APPLY}
     <div class="text-center py-8">
       <div class="custom-btn">
