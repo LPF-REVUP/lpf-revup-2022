@@ -60,7 +60,12 @@
   {#if SHOW_ARCHIVE && session.movieUrl}
     <div class="py-4 flex justify-center">
       <div class="flex justify-center items-center">
-        <iframe src={session.movieUrl} title={session.title} width="900" height="600" />
+        <iframe
+          src={`https://www.youtube.com/embed/${session.movieUrl.split('v=')[1]}?autoplay=1&mute=1`}
+          title="revup 2022 lp"
+          width="900"
+          height="600"
+        />
       </div>
     </div>
   {/if}
