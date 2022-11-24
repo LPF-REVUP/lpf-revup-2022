@@ -62,7 +62,7 @@
       <div class="flex justify-center items-center">
         <iframe
           src={`https://www.youtube.com/embed/${session.movieUrl.split('v=')[1]}?autoplay=1&mute=1`}
-          title="revup 2022 lp"
+          title={session.title}
           width="900"
           height="600"
         />
