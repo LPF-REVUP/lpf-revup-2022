@@ -21,8 +21,17 @@
     return result
   }
   const areas = ['biz', 'tech', 'hands', 'pioneer', 'collabo'].map(
-    (id) => items.filter((s) => s.area?.id === id)[0]?.area,
+    (id) => items.filter((s) => s.areaId?.area_id === id)[0]?.areaId,
   )
+  const areaName = (area: AreaId) => {
+    return match<unknown, string>(area)
+      .with('biz', () => 'サービスデザイン')
+      .with('tech', () => 'LINE Tech')
+      .with('hands', () => 'ハンズオン')
+      .with('pioneer', () => 'パイオニア')
+      .with('collabo', () => 'コラボ')
+      .exhaustive()
+  }
   const minStartAt = items
     .map((s) => dayjs(s.startsAt))
     .reduce((a, b) => (dayjs(a).isBefore(b) ? a : b))
@@ -41,7 +50,7 @@
   }
   const showSessions = (areaId: string) => {
     const sortedSessions = items
-      .filter((s) => s.area.id === areaId)
+      .filter((s) => s.areaId.area_id === areaId)
       .sort((a, b) => dayjs(a.startsAt).diff(b.startsAt))
     const result: Session[] = []
     const dummySessionBase = {
@@ -59,7 +68,7 @@
       if (fromIndex.isBefore(startAt)) {
         const dummySession = {
           id: index.toString(),
-          area: items.filter((s) => s.area.id === areaId)[0].area,
+          areaId: items.filter((s) => s.areaId.area_id === areaId)[0].areaId,
           startsAt: fromIndex.toDate(),
           endsAt: startAt.toDate(),
           ...dummySessionBase,
@@ -100,27 +109,29 @@
                 <div
                   class="flex items-center justify-center min-h-[93px] w-50"
                   use:style={{
-                    'background-color': sessionBackgroundColor(area?.id),
+                    'background-color': sessionBackgroundColor(area?.area_id),
                   }}
                 >
                   <h2 class="font-bold">
-                    {area?.name}
+                    {areaName(area?.area_id)}
                   </h2>
                 </div>
                 <div
                   class="w-0 h-0 border border-t-[36px] border-x-[105px]"
                   use:style={{
-                    'border-color': `${sessionBackgroundColor(area?.id)} transparent transparent`,
+                    'border-color': `${sessionBackgroundColor(
+                      area?.area_id,
+                    )} transparent transparent`,
                   }}
                 />
-                {#each showSessions(area?.id) as session}
+                {#each showSessions(area?.area_id) as session}
                   {#if session.title !== ''}
                     <a
                       href={`/session/${session.id}`}
                       title={session.title}
                       class="text-white hover:no-underline border-revup-deep-brand shadow rounded p-2 my-2"
                       use:style={{
-                        'background-color': sessionBackgroundColor(session.area.id, true),
+                        'background-color': sessionBackgroundColor(session.areaId.area_id, true),
                       }}
                     >
                       <div
