@@ -32,10 +32,9 @@ interface Image {
 
 export type AreaId = 'biz' | 'tech' | 'hands' | 'pioneer' | 'collabo'
 
-// interface Area {
-//   id: AreaId
-//   name: string
-// }
+interface Area {
+  area_id: AreaId
+}
 
 // interface Tag {
 //   name: string
@@ -68,8 +67,7 @@ export interface Session {
   id: string
   title: string
   description: string
-  area: AreaId
-  // area: Area // if you use microCMS team plan
+  areaId: Area // if you use microCMS team plan
   startsAt: Date | string
   endsAt: Date | string
   applicationPage: string
