@@ -1,54 +1,27 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
+  import { useLine } from '$lib/hooks/useLine'
+  import { useLineInfo } from '$lib/hooks/useLineInfo'
   import NavSection from '$lib/pages/NavSection.svelte'
   import FooterSection from '$lib/pages/FooterSection.svelte'
   import { variables } from '$lib/variables'
   import '../app.css'
 
-  let liffObject
-  let profileName
-  let profileUrl
+  let profile = {}
+  let errorMessage = ''
 
-  async function initialize() {
-    import('@line/liff').then((liff: any) => {
-      liff
-        .init({ liffId: variables.liffId })
-        .then(() => {
-          liffObject = liff
-          liff
-            .getProfile()
-            .then((profile: any) => {
-              profileName = profile.displayName
-              profileUrl = profile.pictureUrl
-            })
-            .catch((err: any) => {
-              console.error({ err })
-            })
-        })
-        .catch((err) => {
-          console.error({ err })
-        })
-    })
-  }
-
-  const handleSignIn = () => {
-    if (!liffObject.isLoggedIn()) {
-      liffObject.login({})
-    }
-  }
-
-  onMount(() => {
-    initialize().then(async () => {
-      //
-    })
+  const { liffObject, status, login, logout } = useLine()
+  const {
+    profile: { displayName, pictureUrl },
+    language,
+    os,
+    version,
+    lineVersion,
+  } = useLineInfo({
+    liff: liffObject,
+    status: status,
   })
 </script>
 
-<NavSection
-  signedStatus={liffObject?.isLoggedIn()}
-  {profileName}
-  {profileUrl}
-  on:signIn={handleSignIn}
-/>
+<NavSection signedStatus={status} {displayName} {pictureUrl} on:signIn={login} />
 <slot />
 <FooterSection />
