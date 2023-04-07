@@ -1,6 +1,9 @@
 import { fetchRes } from '$lib/services/content.service'
 import type { Session, Speaker, Sponsor } from '../app'
 
+// https://kit.svelte.dev/docs/page-options#ssr
+export const ssr = false
+
 export async function load() {
   let sponsorRes: Promise<{ totalCount: number; contents: Sponsor[] }>
   let speakerRes: Promise<{ totalCount: number; contents: Speaker[] }>

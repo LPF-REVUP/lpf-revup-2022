@@ -9,10 +9,6 @@ const config = {
 
   kit: {
     adapter: static_adapter(),
-    prerender: {
-      crawl: process.env.NODE_ENV !== 'development',
-      enabled: process.env.NODE_ENV !== 'development',
-    },
 
     paths: { assets: '', base: '' },
     appDir: '2022',
